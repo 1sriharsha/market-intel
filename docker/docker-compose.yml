@@ -1,0 +1,140 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: timescale/timescaledb-ha:pg15-latest
+    environment:
+      POSTGRES_USER: mios
+      POSTGRES_PASSWORD: changeme
+      POSTGRES_DB: mios
+    volumes:
+      - postgres_data:/home/postgres/pgdata/data
+    ports:
+      - "127.0.0.1:5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mios"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    command: redis-server --save 60 1 --loglevel warning
+    volumes:
+      - redis_data:/data
+    ports:
+      - "127.0.0.1:6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  api_server:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    command: uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
+    env_file: ../.env
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ..:/app
+
+  ingestion_worker:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    command: celery -A workers.celery_app worker -Q ingestion -c 2 --loglevel=info
+    env_file: ../.env
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ..:/app
+
+  enrichment_worker:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    command: celery -A workers.celery_app worker -Q enrichment -c 2 --loglevel=info
+    env_file: ../.env
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ..:/app
+
+  intelligence_worker:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    command: celery -A workers.celery_app worker -Q intelligence -c 1 --loglevel=info
+    env_file: ../.env
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ..:/app
+
+  delivery_worker:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    command: celery -A workers.celery_app worker -Q delivery -c 1 --loglevel=info
+    env_file: ../.env
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ..:/app
+
+  celery_beat:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    command: celery -A workers.celery_app beat --loglevel=info --schedule=/tmp/celerybeat-schedule
+    env_file: ../.env
+    depends_on:
+      - redis
+    volumes:
+      - ..:/app
+
+  prometheus:
+    image: prom/prometheus:latest
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    ports:
+      - "127.0.0.1:9090:9090"
+
+  grafana:
+    image: grafana/grafana:latest
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: changeme
+      GF_USERS_ALLOW_SIGN_UP: "false"
+    volumes:
+      - grafana_data:/var/lib/grafana
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus
+
+volumes:
+  postgres_data:
+  redis_data:
+  prometheus_data:
+  grafana_data:

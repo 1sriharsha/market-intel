@@ -1,0 +1,6949 @@
+{
+  "nodes": [
+    {
+      "id": "g0",
+      "type": "group",
+      "label": "Core Config & Ingestion Hub",
+      "x": 0,
+      "y": 0,
+      "width": 1980,
+      "height": 2620,
+      "color": "1"
+    },
+    {
+      "id": "n_ingestion_api_fetcher",
+      "type": "file",
+      "file": "API Fetcher (ingestionapi_fetcher.py).md",
+      "x": 20,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_scheduler_main",
+      "type": "file",
+      "file": "APScheduler Entry Point (scheduler.py).md",
+      "x": 220,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_schema_abnormalreturn",
+      "type": "file",
+      "file": "AbnormalReturn Schema.md",
+      "x": 420,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_normalizer",
+      "type": "file",
+      "file": "Article Normalizer (ingestionnormalizer.py).md",
+      "x": 20,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_storage_database",
+      "type": "file",
+      "file": "Async SQLAlchemy Engine + Session Factory.md",
+      "x": 220,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_scripts_backfill_embeddings",
+      "type": "file",
+      "file": "Backfill Embeddings Script.md",
+      "x": 420,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_celery_app",
+      "type": "file",
+      "file": "Celery App (workerscelery_app.py).md",
+      "x": 20,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_enrichment_price_reactor_rationale_1",
+      "type": "file",
+      "file": "Compute and persist price reactions for ingested articles..md",
+      "x": 220,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_retriever",
+      "type": "file",
+      "file": "Context Retriever (intelligenceretriever.py).md",
+      "x": 420,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_schema_contextpackage",
+      "type": "file",
+      "file": "ContextPackage Schema.md",
+      "x": 20,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_contradiction_detector",
+      "type": "file",
+      "file": "Contradiction Detector (intelligencecontradiction_detector.py).md",
+      "x": 220,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_data_integrity_constraint",
+      "type": "file",
+      "file": "Data Integrity Constraint published_at non-null + append-only.md",
+      "x": 420,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_deduplicator",
+      "type": "file",
+      "file": "Deduplicator (ingestiondeduplicator.py).md",
+      "x": 20,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_main_dev_entrypoint",
+      "type": "file",
+      "file": "Dev Entry Point (main.py).md",
+      "x": 220,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_edgar_fetcher",
+      "type": "file",
+      "file": "EDGAR Fetcher (ingestionedgar_fetcher.py).md",
+      "x": 420,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_enrichment_embedder",
+      "type": "file",
+      "file": "Embedder (enrichmentembedder.py).md",
+      "x": 20,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_enrichment_tasks",
+      "type": "file",
+      "file": "Enrichment Workers (workersenrichment_tasks.py).md",
+      "x": 220,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_enum_significance_level",
+      "type": "file",
+      "file": "Enum SignificanceLevel.md",
+      "x": 420,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_enum_source_tier",
+      "type": "file",
+      "file": "Enum SourceTier.md",
+      "x": 20,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_enum_volatility_regime",
+      "type": "file",
+      "file": "Enum VolatilityRegime.md",
+      "x": 220,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_delivery_rules",
+      "type": "file",
+      "file": "Hard Delivery Rules (5-cap, 4h cooldown, significance filter).md",
+      "x": 420,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_scripts_bootstrap",
+      "type": "file",
+      "file": "Historical Data Bootstrap Script.md",
+      "x": 20,
+      "y": 640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_schema_historicalanalogue",
+      "type": "file",
+      "file": "HistoricalAnalogue Schema.md",
+      "x": 220,
+      "y": 640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_ingestion_tasks",
+      "type": "file",
+      "file": "Ingestion Workers (workersingestion_tasks.py).md",
+      "x": 420,
+      "y": 640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_engine",
+      "type": "file",
+      "file": "Intelligence Engine (intelligenceengine.py).md",
+      "x": 20,
+      "y": 720,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_intelligence_tasks",
+      "type": "file",
+      "file": "Intelligence Workers (workersintelligence_tasks.py).md",
+      "x": 220,
+      "y": 720,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_schema_intelligenceobjectcreate",
+      "type": "file",
+      "file": "IntelligenceObjectCreate Schema.md",
+      "x": 420,
+      "y": 720,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_config_log",
+      "type": "file",
+      "file": "Logger (configlog.py).md",
+      "x": 20,
+      "y": 800,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_macro_fetcher",
+      "type": "file",
+      "file": "Macro Fetcher (ingestionmacro_fetcher.py).md",
+      "x": 220,
+      "y": 800,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_schema_macrosnapshot",
+      "type": "file",
+      "file": "MacroSnapshot Schema.md",
+      "x": 420,
+      "y": 800,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_hallucination_guard",
+      "type": "file",
+      "file": "Post-Generation Hallucination Guard.md",
+      "x": 20,
+      "y": 880,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_price_fetcher",
+      "type": "file",
+      "file": "Price Fetcher (ingestionprice_fetcher.py).md",
+      "x": 220,
+      "y": 880,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_enrichment_price_reactor",
+      "type": "file",
+      "file": "Price Reactor (Abnormal Return Computation).md",
+      "x": 420,
+      "y": 880,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_schema_pricepoint",
+      "type": "file",
+      "file": "PricePoint Schema.md",
+      "x": 20,
+      "y": 960,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_schema_raw_article",
+      "type": "file",
+      "file": "Pydantic Schema RawArticle.md",
+      "x": 220,
+      "y": 960,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_requirements_txt",
+      "type": "file",
+      "file": "Python Dependency Manifest.md",
+      "x": 420,
+      "y": 960,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_rss_fetcher",
+      "type": "file",
+      "file": "RSS Fetcher (ingestionrss_fetcher.py).md",
+      "x": 20,
+      "y": 1040,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_schema_rawarticle",
+      "type": "file",
+      "file": "RawArticle Schema.md",
+      "x": 220,
+      "y": 1040,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_storage_redis_client",
+      "type": "file",
+      "file": "Redis Client (storageredis_client.py).md",
+      "x": 420,
+      "y": 1040,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_regime_classifier",
+      "type": "file",
+      "file": "Regime Classifier (intelligenceregime_classifier.py).md",
+      "x": 20,
+      "y": 1120,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_edgar_fetcher_rationale_1",
+      "type": "file",
+      "file": "SEC EDGAR RSS + GDELT BigQuery historical event fetcher..md",
+      "x": 220,
+      "y": 1120,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_config_settings",
+      "type": "file",
+      "file": "Settings (configsettings.py).md",
+      "x": 420,
+      "y": 1120,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_signal_scorer",
+      "type": "file",
+      "file": "Signal Scorer (intelligencesignal_scorer.py).md",
+      "x": 20,
+      "y": 1200,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_significance_threshold",
+      "type": "file",
+      "file": "Significance Threshold Gate (default 65.0).md",
+      "x": 220,
+      "y": 1200,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_scripts_validate_sources",
+      "type": "file",
+      "file": "Source Feed Validation Script.md",
+      "x": 420,
+      "y": 1200,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_sourcefeed_dataclass",
+      "type": "file",
+      "file": "SourceFeed Dataclass.md",
+      "x": 20,
+      "y": 1280,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_config_sources",
+      "type": "file",
+      "file": "Sources Config (configsources.py).md",
+      "x": 220,
+      "y": 1280,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_api_fetcher_rationale_1",
+      "type": "file",
+      "file": "Structured API sources Finnhub, Marketaux, Alpha Vantage with rate limiting..md",
+      "x": 420,
+      "y": 1280,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_delivery_telegram_bot",
+      "type": "file",
+      "file": "Telegram Bot (deliverytelegram_bot.py).md",
+      "x": 20,
+      "y": 1360,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_delivery_telegram_bot_rationale_1",
+      "type": "file",
+      "file": "Telegram delivery \u2014 evaluate, format, push. Hard delivery rules enforced in code.md",
+      "x": 220,
+      "y": 1360,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_tests_conftest",
+      "type": "file",
+      "file": "Test Fixtures (testsconftest.py).md",
+      "x": 420,
+      "y": 1360,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_test_duplicate_not_written_twice",
+      "type": "file",
+      "file": "Test Duplicate Not Written Twice.md",
+      "x": 20,
+      "y": 1440,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_test_intelligence_cites_source_ids",
+      "type": "file",
+      "file": "Test Intelligence Cites Source IDs.md",
+      "x": 220,
+      "y": 1440,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_test_low_significance_skips_generation",
+      "type": "file",
+      "file": "Test Low Significance Skips Generation.md",
+      "x": 420,
+      "y": 1440,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_test_no_hallucination_beyond_context",
+      "type": "file",
+      "file": "Test No Hallucination Beyond Context.md",
+      "x": 20,
+      "y": 1520,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_test_published_at_never_null",
+      "type": "file",
+      "file": "Test Published At Never Null.md",
+      "x": 220,
+      "y": 1520,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_test_rate_limit_respected",
+      "type": "file",
+      "file": "Test Rate Limit Respected.md",
+      "x": 420,
+      "y": 1520,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_test_unit_misc",
+      "type": "file",
+      "file": "Test Unit Misc (Regime, Scorer, Contradictions, Formatter).md",
+      "x": 20,
+      "y": 1600,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_enrichment_ticker_extractor",
+      "type": "file",
+      "file": "Ticker Extractor (spaCy + Regex).md",
+      "x": 220,
+      "y": 1600,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_two_stage_dedup_pipeline",
+      "type": "file",
+      "file": "Two-Stage Deduplication Pipeline.md",
+      "x": 420,
+      "y": 1600,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_config_watchlist",
+      "type": "file",
+      "file": "Watchlist Config (configwatchlist.py).md",
+      "x": 20,
+      "y": 1680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_api_fetcher_py",
+      "type": "file",
+      "file": "api_fetcher.py.md",
+      "x": 220,
+      "y": 1680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_db_article_ticker_effects_table",
+      "type": "file",
+      "file": "article_ticker_effects DB Table.md",
+      "x": 420,
+      "y": 1680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_db_articles_table",
+      "type": "file",
+      "file": "articles DB Table.md",
+      "x": 20,
+      "y": 1760,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_edgar_fetcher_py",
+      "type": "file",
+      "file": "edgar_fetcher.py.md",
+      "x": 220,
+      "y": 1760,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_db_embeddings_table",
+      "type": "file",
+      "file": "embeddings DB Table.md",
+      "x": 420,
+      "y": 1760,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_db_historical_events_table",
+      "type": "file",
+      "file": "historical_events DB Table.md",
+      "x": 20,
+      "y": 1840,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_db_intelligence_objects_table",
+      "type": "file",
+      "file": "intelligence_objects DB Table.md",
+      "x": 220,
+      "y": 1840,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_db_macro_data_table",
+      "type": "file",
+      "file": "macro_data DB Table.md",
+      "x": 420,
+      "y": 1840,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_enrichment_price_reactor_py",
+      "type": "file",
+      "file": "price_reactor.py.md",
+      "x": 20,
+      "y": 1920,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_db_prices_table",
+      "type": "file",
+      "file": "prices DB Table.md",
+      "x": 220,
+      "y": 1920,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_db_regime_snapshots_table",
+      "type": "file",
+      "file": "regime_snapshots DB Table.md",
+      "x": 420,
+      "y": 1920,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_delivery_telegram_bot_py",
+      "type": "file",
+      "file": "telegram_bot.py.md",
+      "x": 20,
+      "y": 2000,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g1",
+      "type": "group",
+      "label": "External Data Fetching",
+      "x": 2060,
+      "y": 0,
+      "width": 1760,
+      "height": 2120,
+      "color": "2"
+    },
+    {
+      "id": "n_models_enums_attributionmethod",
+      "type": "file",
+      "file": "AttributionMethod.md",
+      "x": 2080,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_ingestion_tasks_rationale_1",
+      "type": "file",
+      "file": "Celery tasks wrapping all ingestion operations..md",
+      "x": 2280,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_ingestion_tasks_rationale_219",
+      "type": "file",
+      "file": "Check feed health and update source_feeds table..md",
+      "x": 2480,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_enums_rationale_1",
+      "type": "file",
+      "file": "Enumerations used across models and business logic..md",
+      "x": 2080,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_enums_eventcategory",
+      "type": "file",
+      "file": "EventCategory.md",
+      "x": 2280,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_macro_fetcher_rationale_1",
+      "type": "file",
+      "file": "FRED, BLS macro data fetcher \u2014 bootstraps full history, syncs daily..md",
+      "x": 2480,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_enums_feedtype",
+      "type": "file",
+      "file": "FeedType.md",
+      "x": 2080,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_ingestion_tasks_rationale_23",
+      "type": "file",
+      "file": "Fetch all RSS feeds, deduplicate, write novel articles to DB..md",
+      "x": 2280,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_api_fetcher_rationale_27",
+      "type": "file",
+      "file": "Fetch company news from Finnhub for all watchlist tickers.     Rate limit 60 re.md",
+      "x": 2480,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_macro_fetcher_rationale_22",
+      "type": "file",
+      "file": "Fetch complete history for all configured FRED series.     Writes to macro_data..md",
+      "x": 2080,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_macro_fetcher_rationale_76",
+      "type": "file",
+      "file": "Fetch latest values for all configured series since last sync. Runs daily at 5 A.md",
+      "x": 2280,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_api_fetcher_rationale_155",
+      "type": "file",
+      "file": "Fetch macro and sector news from Alpha Vantage.     Rate limit 25 reqday..md",
+      "x": 2480,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_scripts_bootstrap_rationale_143",
+      "type": "file",
+      "file": "Insert all configured RSS feeds into source_feeds table..md",
+      "x": 2080,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_enums_liquidityregime",
+      "type": "file",
+      "file": "LiquidityRegime.md",
+      "x": 2280,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_enums_macroregime",
+      "type": "file",
+      "file": "MacroRegime.md",
+      "x": 2480,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_signal_scorer_rationale_69",
+      "type": "file",
+      "file": "Measure how novel an article is compared to recent similar articles.     Simple.md",
+      "x": 2080,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_scripts_bootstrap_rationale_1",
+      "type": "file",
+      "file": "One-time historical data bootstrap. Resumable via bootstrap_state table. Run py.md",
+      "x": 2280,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_edgar_fetcher_rationale_32",
+      "type": "file",
+      "file": "Poll EDGAR RSS feed for recent filings from watchlist companies.     Maps EDGAR.md",
+      "x": 2480,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_edgar_fetcher_rationale_94",
+      "type": "file",
+      "file": "Query GDELT via Google BigQuery for structured historical events.     Requires G.md",
+      "x": 2080,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_enums_reactionlabel",
+      "type": "file",
+      "file": "ReactionLabel.md",
+      "x": 2280,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_ingestion_tasks_rationale_13",
+      "type": "file",
+      "file": "Run an async coroutine from a sync Celery task..md",
+      "x": 2480,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_enums_sentimentregime",
+      "type": "file",
+      "file": "SentimentRegime.md",
+      "x": 2080,
+      "y": 640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_enums_significancelevel",
+      "type": "file",
+      "file": "SignificanceLevel.md",
+      "x": 2280,
+      "y": 640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_enums_sourcetier",
+      "type": "file",
+      "file": "SourceTier.md",
+      "x": 2480,
+      "y": 640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_macro_fetcher_rationale_70",
+      "type": "file",
+      "file": "Synchronous FRED fetch \u2014 run in executor..md",
+      "x": 2080,
+      "y": 720,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_ingestion_tasks_rationale_212",
+      "type": "file",
+      "file": "Trigger enrichment after ingestion \u2014 called internally..md",
+      "x": 2280,
+      "y": 720,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_enums_triggertype",
+      "type": "file",
+      "file": "TriggerType.md",
+      "x": 2480,
+      "y": 720,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_enums_volatilityregime",
+      "type": "file",
+      "file": "VolatilityRegime.md",
+      "x": 2080,
+      "y": 800,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_ingestion_tasks_api_ingestion_async",
+      "type": "file",
+      "file": "_api_ingestion_async().md",
+      "x": 2280,
+      "y": 800,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_ingestion_tasks_edgar_ingestion_async",
+      "type": "file",
+      "file": "_edgar_ingestion_async().md",
+      "x": 2480,
+      "y": 800,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_ingestion_tasks_feed_health_async",
+      "type": "file",
+      "file": "_feed_health_async().md",
+      "x": 2080,
+      "y": 880,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_macro_fetcher_fetch_fred_series",
+      "type": "file",
+      "file": "_fetch_fred_series().md",
+      "x": 2280,
+      "y": 880,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_macro_fetcher_fetch_fred_series_since",
+      "type": "file",
+      "file": "_fetch_fred_series_since().md",
+      "x": 2480,
+      "y": 880,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_macro_fetcher_get_fred_client",
+      "type": "file",
+      "file": "_get_fred_client().md",
+      "x": 2080,
+      "y": 960,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_scripts_bootstrap_insert_gdelt_events",
+      "type": "file",
+      "file": "_insert_gdelt_events().md",
+      "x": 2280,
+      "y": 960,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_ingestion_tasks_rss_ingestion_async",
+      "type": "file",
+      "file": "_rss_ingestion_async().md",
+      "x": 2480,
+      "y": 960,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_ingestion_tasks_run_async",
+      "type": "file",
+      "file": "_run_async().md",
+      "x": 2080,
+      "y": 1040,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_scripts_bootstrap_bootstrap",
+      "type": "file",
+      "file": "bootstrap().md",
+      "x": 2280,
+      "y": 1040,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_scripts_bootstrap_py",
+      "type": "file",
+      "file": "bootstrap.py.md",
+      "x": 2480,
+      "y": 1040,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_macro_fetcher_bootstrap_macro_series",
+      "type": "file",
+      "file": "bootstrap_macro_series().md",
+      "x": 2080,
+      "y": 1120,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_signal_scorer_compute_novelty_score",
+      "type": "file",
+      "file": "compute_novelty_score().md",
+      "x": 2280,
+      "y": 1120,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_enums_py",
+      "type": "file",
+      "file": "enums.py.md",
+      "x": 2480,
+      "y": 1120,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_api_fetcher_fetch_alpha_vantage_news",
+      "type": "file",
+      "file": "fetch_alpha_vantage_news().md",
+      "x": 2080,
+      "y": 1200,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_api_fetcher_fetch_finnhub_news",
+      "type": "file",
+      "file": "fetch_finnhub_news().md",
+      "x": 2280,
+      "y": 1200,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_edgar_fetcher_fetch_gdelt_events",
+      "type": "file",
+      "file": "fetch_gdelt_events().md",
+      "x": 2480,
+      "y": 1200,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_scripts_bootstrap_get_step_status",
+      "type": "file",
+      "file": "get_step_status().md",
+      "x": 2080,
+      "y": 1280,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_ingestion_tasks_py",
+      "type": "file",
+      "file": "ingestion_tasks.py.md",
+      "x": 2280,
+      "y": 1280,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_macro_fetcher_py",
+      "type": "file",
+      "file": "macro_fetcher.py.md",
+      "x": 2480,
+      "y": 1280,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_scripts_bootstrap_mark_step",
+      "type": "file",
+      "file": "mark_step().md",
+      "x": 2080,
+      "y": 1360,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_edgar_fetcher_poll_edgar_rss",
+      "type": "file",
+      "file": "poll_edgar_rss().md",
+      "x": 2280,
+      "y": 1360,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_ingestion_tasks_run_api_ingestion",
+      "type": "file",
+      "file": "run_api_ingestion().md",
+      "x": 2480,
+      "y": 1360,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_ingestion_tasks_run_edgar_ingestion",
+      "type": "file",
+      "file": "run_edgar_ingestion().md",
+      "x": 2080,
+      "y": 1440,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_ingestion_tasks_run_enrichment_pipeline",
+      "type": "file",
+      "file": "run_enrichment_pipeline().md",
+      "x": 2280,
+      "y": 1440,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_ingestion_tasks_run_feed_health_check",
+      "type": "file",
+      "file": "run_feed_health_check().md",
+      "x": 2480,
+      "y": 1440,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_ingestion_tasks_run_rss_ingestion",
+      "type": "file",
+      "file": "run_rss_ingestion().md",
+      "x": 2080,
+      "y": 1520,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_scripts_bootstrap_seed_source_feeds",
+      "type": "file",
+      "file": "seed_source_feeds().md",
+      "x": 2280,
+      "y": 1520,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_str",
+      "type": "file",
+      "file": "str.md",
+      "x": 2480,
+      "y": 1520,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_macro_fetcher_sync_macro_updates",
+      "type": "file",
+      "file": "sync_macro_updates().md",
+      "x": 2080,
+      "y": 1600,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g2",
+      "type": "group",
+      "label": "API Routes & Contradiction Detection",
+      "x": 3900,
+      "y": 0,
+      "width": 1760,
+      "height": 1820,
+      "color": "3"
+    },
+    {
+      "id": "n_unit_test_unit_misc_testcontradictiondetector_test_bullish_headline_negative_price",
+      "type": "file",
+      "file": ".test_bullish_headline_negative_price().md",
+      "x": 3920,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_unit_misc_testcontradictiondetector_test_no_contradictions_consistent",
+      "type": "file",
+      "file": ".test_no_contradictions_consistent().md",
+      "x": 4120,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_schemas_abnormalreturn",
+      "type": "file",
+      "file": "AbnormalReturn.md",
+      "x": 4320,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_schemas_articleread",
+      "type": "file",
+      "file": "ArticleRead.md",
+      "x": 3920,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_retriever_rationale_189",
+      "type": "file",
+      "file": "Assemble the full context package for intelligence generation.     All data veri.md",
+      "x": 4120,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_basemodel",
+      "type": "file",
+      "file": "BaseModel.md",
+      "x": 4320,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_schemas_rationale_14",
+      "type": "file",
+      "file": "Canonical article representation produced by all normalizers..md",
+      "x": 3920,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_schemas_contextpackage",
+      "type": "file",
+      "file": "ContextPackage.md",
+      "x": 4120,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_schemas_contradiction",
+      "type": "file",
+      "file": "Contradiction.md",
+      "x": 4320,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_retriever_rationale_20",
+      "type": "file",
+      "file": "Embed query text, search pgvector for semantically similar articles.     Score =.md",
+      "x": 3920,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_regime_classifier_rationale_145",
+      "type": "file",
+      "file": "Fetch most recent regime snapshot from DB..md",
+      "x": 4120,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_retriever_rationale_89",
+      "type": "file",
+      "file": "Find similar past events from historical_events table.     Matches on event cat.md",
+      "x": 4320,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_routes_health_rationale_1",
+      "type": "file",
+      "file": "Health and status endpoints..md",
+      "x": 3920,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_schemas_healthresponse",
+      "type": "file",
+      "file": "HealthResponse.md",
+      "x": 4120,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_schemas_historicalanalogue",
+      "type": "file",
+      "file": "HistoricalAnalogue.md",
+      "x": 4320,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_contradiction_detector_rationale_11",
+      "type": "file",
+      "file": "Identify contradictions between article sentiment and price behavior.      Check.md",
+      "x": 3920,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_routes_health_rationale_21",
+      "type": "file",
+      "file": "Ingestion lag, feed health, embedding backlog, last intelligence run..md",
+      "x": 4120,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_intelligence_cites_source_ids_rationale_43",
+      "type": "file",
+      "file": "Intelligence object with empty articles in context must not be generated..md",
+      "x": 4320,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_schemas_intelligenceobjectcreate",
+      "type": "file",
+      "file": "IntelligenceObjectCreate.md",
+      "x": 3920,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_schemas_intelligenceobjectread",
+      "type": "file",
+      "file": "IntelligenceObjectRead.md",
+      "x": 4120,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_contradiction_detector_rationale_1",
+      "type": "file",
+      "file": "Price vs narrative contradiction detection..md",
+      "x": 4320,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_schemas_pricepoint",
+      "type": "file",
+      "file": "PricePoint.md",
+      "x": 3920,
+      "y": 640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_schemas_rationale_1",
+      "type": "file",
+      "file": "Pydantic schemas for API responses and internal data transfer objects..md",
+      "x": 4120,
+      "y": 640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_schemas_rawarticle",
+      "type": "file",
+      "file": "RawArticle.md",
+      "x": 4320,
+      "y": 640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_schemas_sourcefeedread",
+      "type": "file",
+      "file": "SourceFeedRead.md",
+      "x": 3920,
+      "y": 720,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_schemas_systemstatus",
+      "type": "file",
+      "file": "SystemStatus.md",
+      "x": 4120,
+      "y": 720,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_tests_conftest_rationale_1",
+      "type": "file",
+      "file": "Test fixtures mock DB, Redis, Claude stub, fixed IntelligenceObject. All unit t.md",
+      "x": 4320,
+      "y": 720,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_unit_misc_testcontradictiondetector",
+      "type": "file",
+      "file": "TestContradictionDetector.md",
+      "x": 3920,
+      "y": 800,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_unit_misc_rationale_1",
+      "type": "file",
+      "file": "Unit tests for regime classifier, signal scorer, contradiction detector, Telegra.md",
+      "x": 4120,
+      "y": 800,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_retriever_get_historical_price_reaction",
+      "type": "file",
+      "file": "_get_historical_price_reaction().md",
+      "x": 4320,
+      "y": 800,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_tests_conftest_anyio_backend",
+      "type": "file",
+      "file": "anyio_backend().md",
+      "x": 3920,
+      "y": 880,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_retriever_build_context_package",
+      "type": "file",
+      "file": "build_context_package().md",
+      "x": 4120,
+      "y": 880,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_tests_conftest_py",
+      "type": "file",
+      "file": "conftest.py.md",
+      "x": 4320,
+      "y": 880,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_contradiction_detector_py",
+      "type": "file",
+      "file": "contradiction_detector.py.md",
+      "x": 3920,
+      "y": 960,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_contradiction_detector_detect_contradictions",
+      "type": "file",
+      "file": "detect_contradictions().md",
+      "x": 4120,
+      "y": 960,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_tests_conftest_fixed_context",
+      "type": "file",
+      "file": "fixed_context().md",
+      "x": 4320,
+      "y": 960,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_regime_classifier_get_latest_regime",
+      "type": "file",
+      "file": "get_latest_regime().md",
+      "x": 3920,
+      "y": 1040,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_routes_health_health",
+      "type": "file",
+      "file": "health().md",
+      "x": 4120,
+      "y": 1040,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_api_routes_health_py",
+      "type": "file",
+      "file": "health.py.md",
+      "x": 4320,
+      "y": 1040,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_tests_conftest_mock_anthropic",
+      "type": "file",
+      "file": "mock_anthropic().md",
+      "x": 3920,
+      "y": 1120,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_tests_conftest_mock_redis",
+      "type": "file",
+      "file": "mock_redis().md",
+      "x": 4120,
+      "y": 1120,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_tests_conftest_mock_session",
+      "type": "file",
+      "file": "mock_session().md",
+      "x": 4320,
+      "y": 1120,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_retriever_rationale_1",
+      "type": "file",
+      "file": "pgvector semantic search + context package assembly..md",
+      "x": 3920,
+      "y": 1200,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_retriever_retrieve_historical_analogues",
+      "type": "file",
+      "file": "retrieve_historical_analogues().md",
+      "x": 4120,
+      "y": 1200,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_retriever_retrieve_similar_articles",
+      "type": "file",
+      "file": "retrieve_similar_articles().md",
+      "x": 4320,
+      "y": 1200,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_retriever_py",
+      "type": "file",
+      "file": "retriever.py.md",
+      "x": 3920,
+      "y": 1280,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_schemas_py",
+      "type": "file",
+      "file": "schemas.py.md",
+      "x": 4120,
+      "y": 1280,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_routes_health_status",
+      "type": "file",
+      "file": "status().md",
+      "x": 4320,
+      "y": 1280,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_intelligence_cites_source_ids_test_intelligence_object_never_orphaned",
+      "type": "file",
+      "file": "test_intelligence_object_never_orphaned().md",
+      "x": 3920,
+      "y": 1360,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_tests_unit_test_unit_misc_py",
+      "type": "file",
+      "file": "test_unit_misc.py.md",
+      "x": 4120,
+      "y": 1360,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g3",
+      "type": "group",
+      "label": "Service Entry & Delivery",
+      "x": 5740,
+      "y": 0,
+      "width": 1540,
+      "height": 1520,
+      "color": "4"
+    },
+    {
+      "id": "n_unit_test_rate_limit_respected_rationale_14",
+      "type": "file",
+      "file": "After MAX_DAILY_ALERTS deliveries, further alerts must be suppressed..md",
+      "x": 5760,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_rate_limit_respected_rationale_31",
+      "type": "file",
+      "file": "Before the cap is reached, delivery must be allowed..md",
+      "x": 5960,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_rate_limit_respected_rationale_1",
+      "type": "file",
+      "file": "CRITICAL TEST test_rate_limit_respected Operational compliance \u2014 Telegram daily.md",
+      "x": 6160,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_rate_limit_respected_rationale_76",
+      "type": "file",
+      "file": "Critical significance objects must pass delivery check (when under cap, no coold.md",
+      "x": 5760,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_rate_limit_respected_rationale_90",
+      "type": "file",
+      "file": "Daily cap must be exactly 5 \u2014 hardcoded in spec, not arbitrary..md",
+      "x": 5960,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_delivery_telegram_bot_rationale_56",
+      "type": "file",
+      "file": "Evaluate, format, and push. Updates cooldowns and counters on success.     Retur.md",
+      "x": 6160,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_api_main_rationale_1",
+      "type": "file",
+      "file": "FastAPI application entry point..md",
+      "x": 5760,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_api_fetcher_rationale_85",
+      "type": "file",
+      "file": "Fetch entity-tagged news from Marketaux.     Rate limit 100 reqday via Redis d.md",
+      "x": 5960,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_storage_redis_client_rationale_85",
+      "type": "file",
+      "file": "Increment a daily counter (resets at midnight UTC). Returns new count..md",
+      "x": 6160,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_rate_limit_respected_rationale_63",
+      "type": "file",
+      "file": "Low and medium significance objects must never be delivered..md",
+      "x": 5760,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_storage_redis_client_rationale_36",
+      "type": "file",
+      "file": "Mark a URL hash as seen. Raises nothing on failure \u2014 dedup is best-effort..md",
+      "x": 5960,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_storage_redis_client_rationale_1",
+      "type": "file",
+      "file": "Redis connection + helper utilities..md",
+      "x": 6160,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_delivery_telegram_bot_rationale_24",
+      "type": "file",
+      "file": "Returns True if an intelligence object should be pushed to Telegram.      Hard r.md",
+      "x": 5760,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_storage_redis_client_rationale_58",
+      "type": "file",
+      "file": "Returns True if request is allowed, False if rate limit exceeded..md",
+      "x": 5960,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_rate_limit_respected_rationale_97",
+      "type": "file",
+      "file": "Ticker cooldown must be exactly 4 hours per spec..md",
+      "x": 6160,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_rate_limit_respected_rationale_48",
+      "type": "file",
+      "file": "Ticker on 4-hour cooldown must prevent delivery..md",
+      "x": 5760,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_storage_redis_client_next_midnight_ts",
+      "type": "file",
+      "file": "_next_midnight_ts().md",
+      "x": 5960,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_storage_redis_client_check_rate_limit",
+      "type": "file",
+      "file": "check_rate_limit().md",
+      "x": 6160,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_storage_redis_client_close_redis",
+      "type": "file",
+      "file": "close_redis().md",
+      "x": 5760,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_delivery_telegram_bot_deliver",
+      "type": "file",
+      "file": "deliver().md",
+      "x": 5960,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_delivery_telegram_bot_evaluate_delivery",
+      "type": "file",
+      "file": "evaluate_delivery().md",
+      "x": 6160,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_api_fetcher_fetch_marketaux_news",
+      "type": "file",
+      "file": "fetch_marketaux_news().md",
+      "x": 5760,
+      "y": 640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_storage_redis_client_get_daily_counter",
+      "type": "file",
+      "file": "get_daily_counter().md",
+      "x": 5960,
+      "y": 640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_storage_redis_client_get_rate_limit_count",
+      "type": "file",
+      "file": "get_rate_limit_count().md",
+      "x": 6160,
+      "y": 640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_storage_redis_client_get_redis",
+      "type": "file",
+      "file": "get_redis().md",
+      "x": 5760,
+      "y": 720,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_storage_redis_client_increment_daily_counter",
+      "type": "file",
+      "file": "increment_daily_counter().md",
+      "x": 5960,
+      "y": 720,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_int",
+      "type": "file",
+      "file": "int.md",
+      "x": 6160,
+      "y": 720,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_storage_redis_client_is_ticker_on_cooldown",
+      "type": "file",
+      "file": "is_ticker_on_cooldown().md",
+      "x": 5760,
+      "y": 800,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_storage_redis_client_is_url_seen",
+      "type": "file",
+      "file": "is_url_seen().md",
+      "x": 5960,
+      "y": 800,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_api_main_lifespan",
+      "type": "file",
+      "file": "lifespan().md",
+      "x": 6160,
+      "y": 800,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_api_main_py",
+      "type": "file",
+      "file": "main.py_1.md",
+      "x": 5760,
+      "y": 880,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_storage_redis_client_py",
+      "type": "file",
+      "file": "redis_client.py.md",
+      "x": 5960,
+      "y": 880,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_storage_redis_client_set_ticker_cooldown",
+      "type": "file",
+      "file": "set_ticker_cooldown().md",
+      "x": 6160,
+      "y": 880,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_storage_redis_client_set_url_seen",
+      "type": "file",
+      "file": "set_url_seen().md",
+      "x": 5760,
+      "y": 960,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_rate_limit_respected_test_cooldown_is_four_hours",
+      "type": "file",
+      "file": "test_cooldown_is_four_hours().md",
+      "x": 5960,
+      "y": 960,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_rate_limit_respected_test_critical_significance_allowed",
+      "type": "file",
+      "file": "test_critical_significance_allowed().md",
+      "x": 6160,
+      "y": 960,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_rate_limit_respected_test_daily_cap_is_exactly_five",
+      "type": "file",
+      "file": "test_daily_cap_is_exactly_five().md",
+      "x": 5760,
+      "y": 1040,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_rate_limit_respected_test_low_significance_always_suppressed",
+      "type": "file",
+      "file": "test_low_significance_always_suppressed().md",
+      "x": 5960,
+      "y": 1040,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_tests_unit_test_rate_limit_respected_py",
+      "type": "file",
+      "file": "test_rate_limit_respected.py.md",
+      "x": 6160,
+      "y": 1040,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_rate_limit_respected_test_telegram_daily_cap_allows_before_limit",
+      "type": "file",
+      "file": "test_telegram_daily_cap_allows_before_limit().md",
+      "x": 5760,
+      "y": 1120,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_rate_limit_respected_test_telegram_daily_cap_enforced",
+      "type": "file",
+      "file": "test_telegram_daily_cap_enforced().md",
+      "x": 5960,
+      "y": 1120,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_rate_limit_respected_test_ticker_cooldown_enforced",
+      "type": "file",
+      "file": "test_ticker_cooldown_enforced().md",
+      "x": 6160,
+      "y": 1120,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g4",
+      "type": "group",
+      "label": "Intelligence Generation",
+      "x": 7360,
+      "y": 0,
+      "width": 1540,
+      "height": 1420,
+      "color": "5"
+    },
+    {
+      "id": "n_unit_test_unit_misc_testtelegramformatter_test_message_contains_significance",
+      "type": "file",
+      "file": ".test_message_contains_significance().md",
+      "x": 7380,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_unit_misc_testtelegramformatter_test_message_contains_tickers",
+      "type": "file",
+      "file": ".test_message_contains_tickers().md",
+      "x": 7580,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_unit_misc_testtelegramformatter_test_message_within_char_limit",
+      "type": "file",
+      "file": ".test_message_within_char_limit().md",
+      "x": 7780,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_unit_misc_testtelegramformatter_test_very_long_message_truncated",
+      "type": "file",
+      "file": ".test_very_long_message_truncated().md",
+      "x": 7380,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_prompts_rationale_1",
+      "type": "file",
+      "file": "All Claude prompt templates. Edit prompts HERE and nowhere else..md",
+      "x": 7580,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_prompts_rationale_154",
+      "type": "file",
+      "file": "Assemble the full intelligence generation prompt from a context package dict..md",
+      "x": 7780,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_intelligence_cites_source_ids_rationale_1",
+      "type": "file",
+      "file": "CRITICAL TEST test_intelligence_cites_source_ids Intelligence quality \u2014 every g.md",
+      "x": 7380,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_engine_rationale_144",
+      "type": "file",
+      "file": "Call Claude with assembled context package.     Post-generation validation stri.md",
+      "x": 7580,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_prompts",
+      "type": "file",
+      "file": "Claude Prompt Templates (intelligenceprompts.py).md",
+      "x": 7780,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_engine_rationale_229",
+      "type": "file",
+      "file": "Extract and parse JSON from Claude's response..md",
+      "x": 7380,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_delivery_telegram_bot_rationale_80",
+      "type": "file",
+      "file": "Format an IntelligenceObject as a Telegram message.     Max 3800 characters (Tel.md",
+      "x": 7580,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_engine_rationale_113",
+      "type": "file",
+      "file": "Group articles by dominant topic. Simple priority-based clustering..md",
+      "x": 7780,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_intelligence_cites_source_ids_rationale_16",
+      "type": "file",
+      "file": "IntelligenceObject generated from a context package must have     non-empty sour.md",
+      "x": 7380,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_engine_rationale_1",
+      "type": "file",
+      "file": "Main intelligence loop \u2014 retrieves context, calls Claude, writes intelligence ob.md",
+      "x": 7580,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_engine_rationale_37",
+      "type": "file",
+      "file": "Main intelligence loop.     1. Fetch unprocessed high-significance articles from.md",
+      "x": 7780,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_engine_rationale_249",
+      "type": "file",
+      "file": "Post-generation validation     - Strip any ticker not present in context_packag.md",
+      "x": 7380,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_delivery_telegram_bot_rationale_132",
+      "type": "file",
+      "file": "Send a formatted message to the configured Telegram chat.     Retries 3x on netw.md",
+      "x": 7580,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_unit_misc_testtelegramformatter",
+      "type": "file",
+      "file": "TestTelegramFormatter.md",
+      "x": 7780,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_intelligence_cites_source_ids_rationale_63",
+      "type": "file",
+      "file": "The DB INSERT for intelligence objects must include source_article_ids..md",
+      "x": 7380,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_engine_cluster_by_topic",
+      "type": "file",
+      "file": "_cluster_by_topic().md",
+      "x": 7580,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_engine_get_client",
+      "type": "file",
+      "file": "_get_client().md",
+      "x": 7780,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_engine_parse_claude_output",
+      "type": "file",
+      "file": "_parse_claude_output().md",
+      "x": 7380,
+      "y": 640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_engine_validate_and_strip",
+      "type": "file",
+      "file": "_validate_and_strip().md",
+      "x": 7580,
+      "y": 640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_prompts_build_intelligence_prompt",
+      "type": "file",
+      "file": "build_intelligence_prompt().md",
+      "x": 7780,
+      "y": 640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_engine_py",
+      "type": "file",
+      "file": "engine.py.md",
+      "x": 7380,
+      "y": 720,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_prompts_format_analogues_block",
+      "type": "file",
+      "file": "format_analogues_block().md",
+      "x": 7580,
+      "y": 720,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_prompts_format_articles_block",
+      "type": "file",
+      "file": "format_articles_block().md",
+      "x": 7780,
+      "y": 720,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_prompts_format_contradictions_block",
+      "type": "file",
+      "file": "format_contradictions_block().md",
+      "x": 7380,
+      "y": 800,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_prompts_format_macro_block",
+      "type": "file",
+      "file": "format_macro_block().md",
+      "x": 7580,
+      "y": 800,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_delivery_telegram_bot_format_message",
+      "type": "file",
+      "file": "format_message().md",
+      "x": 7780,
+      "y": 800,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_prompts_format_prices_block",
+      "type": "file",
+      "file": "format_prices_block().md",
+      "x": 7380,
+      "y": 880,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_prompts_format_regime_block",
+      "type": "file",
+      "file": "format_regime_block().md",
+      "x": 7580,
+      "y": 880,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_engine_generate_intelligence",
+      "type": "file",
+      "file": "generate_intelligence().md",
+      "x": 7780,
+      "y": 880,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_prompts_py",
+      "type": "file",
+      "file": "prompts.py.md",
+      "x": 7380,
+      "y": 960,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_delivery_telegram_bot_push_message",
+      "type": "file",
+      "file": "push_message().md",
+      "x": 7580,
+      "y": 960,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_engine_run_intelligence_cycle",
+      "type": "file",
+      "file": "run_intelligence_cycle().md",
+      "x": 7780,
+      "y": 960,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_intelligence_cites_source_ids_test_intelligence_cites_source_ids",
+      "type": "file",
+      "file": "test_intelligence_cites_source_ids().md",
+      "x": 7380,
+      "y": 1040,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_tests_unit_test_intelligence_cites_source_ids_py",
+      "type": "file",
+      "file": "test_intelligence_cites_source_ids.py.md",
+      "x": 7580,
+      "y": 1040,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_intelligence_cites_source_ids_test_intelligence_source_ids_written_to_db",
+      "type": "file",
+      "file": "test_intelligence_source_ids_written_to_db().md",
+      "x": 7780,
+      "y": 1040,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g5",
+      "type": "group",
+      "label": "FastAPI Layer",
+      "x": 8980,
+      "y": 0,
+      "width": 1320,
+      "height": 1220,
+      "color": "6"
+    },
+    {
+      "id": "n_api_route_articles",
+      "type": "file",
+      "file": "Articles Endpoints.md",
+      "x": 9000,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_schema_contradiction",
+      "type": "file",
+      "file": "Contradiction Schema.md",
+      "x": 9200,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docker_compose",
+      "type": "file",
+      "file": "Docker Compose (Production Services).md",
+      "x": 9400,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_routes_sources_rationale_31",
+      "type": "file",
+      "file": "Enable or disable a source feed..md",
+      "x": 9000,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_api_main",
+      "type": "file",
+      "file": "FastAPI Application Entry Point.md",
+      "x": 9200,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_api_dependencies",
+      "type": "file",
+      "file": "FastAPI Dependencies (DB Session Provider).md",
+      "x": 9400,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_monitoring_health_checker",
+      "type": "file",
+      "file": "Feed Health Checker.md",
+      "x": 9000,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_service_grafana",
+      "type": "file",
+      "file": "Grafana Service.md",
+      "x": 9200,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_api_route_health",
+      "type": "file",
+      "file": "Health and Status Endpoints.md",
+      "x": 9400,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_api_route_intelligence",
+      "type": "file",
+      "file": "Intelligence Endpoints.md",
+      "x": 9000,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_routes_intelligence_rationale_1",
+      "type": "file",
+      "file": "Intelligence endpoints..md",
+      "x": 9200,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_routes_intelligence_rationale_22",
+      "type": "file",
+      "file": "List intelligence objects with optional filters..md",
+      "x": 9400,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_routes_intelligence_rationale_65",
+      "type": "file",
+      "file": "Manually trigger an intelligence cycle..md",
+      "x": 9000,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_service_postgres",
+      "type": "file",
+      "file": "PostgreSQL + TimescaleDB Service.md",
+      "x": 9200,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_monitoring_metrics",
+      "type": "file",
+      "file": "Prometheus Metric Definitions.md",
+      "x": 9400,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_docker_prometheus_yml",
+      "type": "file",
+      "file": "Prometheus Scrape Configuration.md",
+      "x": 9000,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_service_prometheus",
+      "type": "file",
+      "file": "Prometheus Service.md",
+      "x": 9200,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_schema_context_package",
+      "type": "file",
+      "file": "Pydantic Schema ContextPackage.md",
+      "x": 9400,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_schema_historical_analogue",
+      "type": "file",
+      "file": "Pydantic Schema HistoricalAnalogue.md",
+      "x": 9000,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_schema_intelligence_object_create",
+      "type": "file",
+      "file": "Pydantic Schema IntelligenceObjectCreate.md",
+      "x": 9200,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_schema_macro_snapshot",
+      "type": "file",
+      "file": "Pydantic Schema MacroSnapshot.md",
+      "x": 9400,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_schemas",
+      "type": "file",
+      "file": "Pydantic Schemas (schemas.py).md",
+      "x": 9000,
+      "y": 640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_service_redis",
+      "type": "file",
+      "file": "Redis Service.md",
+      "x": 9200,
+      "y": 640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_api_route_sources",
+      "type": "file",
+      "file": "Sources Endpoints.md",
+      "x": 9400,
+      "y": 640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_api_routes_articles_py",
+      "type": "file",
+      "file": "articles.py.md",
+      "x": 9000,
+      "y": 720,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_routes_intelligence_get_intelligence",
+      "type": "file",
+      "file": "get_intelligence().md",
+      "x": 9200,
+      "y": 720,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_api_routes_intelligence_py",
+      "type": "file",
+      "file": "intelligence.py.md",
+      "x": 9400,
+      "y": 720,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_routes_articles_list_articles",
+      "type": "file",
+      "file": "list_articles().md",
+      "x": 9000,
+      "y": 800,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_routes_intelligence_list_intelligence",
+      "type": "file",
+      "file": "list_intelligence().md",
+      "x": 9200,
+      "y": 800,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_routes_sources_list_sources",
+      "type": "file",
+      "file": "list_sources().md",
+      "x": 9400,
+      "y": 800,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_api_routes_sources_py",
+      "type": "file",
+      "file": "sources.py_1.md",
+      "x": 9000,
+      "y": 880,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_routes_intelligence_trigger_intelligence_cycle",
+      "type": "file",
+      "file": "trigger_intelligence_cycle().md",
+      "x": 9200,
+      "y": 880,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_routes_sources_update_source",
+      "type": "file",
+      "file": "update_source().md",
+      "x": 9400,
+      "y": 880,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g6",
+      "type": "group",
+      "label": "Signal Scoring",
+      "x": 10380,
+      "y": 0,
+      "width": 1320,
+      "height": 1120,
+      "color": "1"
+    },
+    {
+      "id": "n_unit_test_unit_misc_testsignalscorer_test_score_capped_at_100",
+      "type": "file",
+      "file": ".test_score_capped_at_100().md",
+      "x": 10400,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_unit_misc_testsignalscorer_test_single_tier4_scores_low",
+      "type": "file",
+      "file": ".test_single_tier4_scores_low().md",
+      "x": 10600,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_unit_misc_testsignalscorer_test_tier1_multiple_sources_scores_high",
+      "type": "file",
+      "file": ".test_tier1_multiple_sources_scores_high().md",
+      "x": 10800,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_low_significance_skips_generation_rationale_110",
+      "type": "file",
+      "file": "Articles below threshold that are skipped by intelligence cycle     must not be.md",
+      "x": 10400,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_low_significance_skips_generation_rationale_1",
+      "type": "file",
+      "file": "CRITICAL TEST test_low_significance_skips_generation Cost control \u2014 articles be.md",
+      "x": 10600,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_signal_scorer_rationale_20",
+      "type": "file",
+      "file": "Compute a 0\u2013100 significance score for a batch of articles.      Inputs     - s.md",
+      "x": 10800,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_low_significance_skips_generation_rationale_56",
+      "type": "file",
+      "file": "Default significance threshold must be 65.0 per spec..md",
+      "x": 10400,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_low_significance_skips_generation_rationale_62",
+      "type": "file",
+      "file": "Empty article list must score 0..md",
+      "x": 10600,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_signal_scorer_rationale_1",
+      "type": "file",
+      "file": "Event significance scoring 0\u2013100..md",
+      "x": 10800,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_low_significance_skips_generation_rationale_30",
+      "type": "file",
+      "file": "Intelligence cycle must not process articles below SIGNIFICANCE_THRESHOLD.     A.md",
+      "x": 10400,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_signal_scorer_rationale_94",
+      "type": "file",
+      "file": "Map numeric score to significance level enum value..md",
+      "x": 10600,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_low_significance_skips_generation_rationale_98",
+      "type": "file",
+      "file": "Score-to-level mapping must match spec thresholds..md",
+      "x": 10800,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_unit_misc_testsignalscorer",
+      "type": "file",
+      "file": "TestSignalScorer.md",
+      "x": 10400,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_low_significance_skips_generation_rationale_68",
+      "type": "file",
+      "file": "Tier 1 articles must always score well above default threshold..md",
+      "x": 10600,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_low_significance_skips_generation_rationale_83",
+      "type": "file",
+      "file": "Tier 4 (sentiment only) articles must score below threshold..md",
+      "x": 10800,
+      "y": 400,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_engine_rationale_284",
+      "type": "file",
+      "file": "Wrapper for signal scorer \u2014 used by workers..md",
+      "x": 10400,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_signal_scorer_tier_weight",
+      "type": "file",
+      "file": "_tier_weight().md",
+      "x": 10600,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_low_significance_skips_generation_make_low_sig_article",
+      "type": "file",
+      "file": "make_low_sig_article().md",
+      "x": 10800,
+      "y": 480,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_signal_scorer_score_significance",
+      "type": "file",
+      "file": "score_significance().md",
+      "x": 10400,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_engine_score_significance_for_articles",
+      "type": "file",
+      "file": "score_significance_for_articles().md",
+      "x": 10600,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_signal_scorer_py",
+      "type": "file",
+      "file": "signal_scorer.py.md",
+      "x": 10800,
+      "y": 560,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_signal_scorer_significance_level_from_score",
+      "type": "file",
+      "file": "significance_level_from_score().md",
+      "x": 10400,
+      "y": 640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_low_significance_skips_generation_test_low_significance_articles_skipped_by_cycle",
+      "type": "file",
+      "file": "test_low_significance_articles_skipped_by_cycle().md",
+      "x": 10600,
+      "y": 640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_tests_unit_test_low_significance_skips_generation_py",
+      "type": "file",
+      "file": "test_low_significance_skips_generation.py.md",
+      "x": 10800,
+      "y": 640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_low_significance_skips_generation_test_significance_level_mapping",
+      "type": "file",
+      "file": "test_significance_level_mapping().md",
+      "x": 10400,
+      "y": 720,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_low_significance_skips_generation_test_significance_scorer_returns_zero_for_empty",
+      "type": "file",
+      "file": "test_significance_scorer_returns_zero_for_empty().md",
+      "x": 10600,
+      "y": 720,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_low_significance_skips_generation_test_significance_scorer_tier1_always_high",
+      "type": "file",
+      "file": "test_significance_scorer_tier1_always_high().md",
+      "x": 10800,
+      "y": 720,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_low_significance_skips_generation_test_significance_scorer_tier4_scores_below_threshold",
+      "type": "file",
+      "file": "test_significance_scorer_tier4_scores_below_threshold().md",
+      "x": 10400,
+      "y": 800,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_low_significance_skips_generation_test_significance_threshold_default_is_65",
+      "type": "file",
+      "file": "test_significance_threshold_default_is_65().md",
+      "x": 10600,
+      "y": 800,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_low_significance_skips_generation_test_suppressed_articles_not_marked_processed_without_generation",
+      "type": "file",
+      "file": "test_suppressed_articles_not_marked_processed_without_generation().md",
+      "x": 10800,
+      "y": 800,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g7",
+      "type": "group",
+      "label": "Article Normalization",
+      "x": 0,
+      "y": 2700,
+      "width": 1320,
+      "height": 1120,
+      "color": "2"
+    },
+    {
+      "id": "n_unit_test_unit_misc_testnormalizer_test_article_id_is_sha256",
+      "type": "file",
+      "file": ".test_article_id_is_sha256().md",
+      "x": 20,
+      "y": 2780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_unit_misc_testnormalizer_test_canonical_url_strips_tracking_params",
+      "type": "file",
+      "file": ".test_canonical_url_strips_tracking_params().md",
+      "x": 220,
+      "y": 2780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_unit_misc_testnormalizer_test_html_stripped_from_summary",
+      "type": "file",
+      "file": ".test_html_stripped_from_summary().md",
+      "x": 420,
+      "y": 2780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_published_at_never_null_rationale_1",
+      "type": "file",
+      "file": "CRITICAL TEST test_published_at_never_null Data integrity \u2014 normalizer must rej.md",
+      "x": 20,
+      "y": 2860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_normalizer_rationale_1",
+      "type": "file",
+      "file": "Maps all raw ingestion sources to canonical RawArticle schema..md",
+      "x": 220,
+      "y": 2860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_published_at_never_null_rationale_87",
+      "type": "file",
+      "file": "Naive datetimes must be converted to UTC..md",
+      "x": 420,
+      "y": 2860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_normalizer_rationale_47",
+      "type": "file",
+      "file": "Parse any reasonable date string to a UTC-aware datetime. Returns fallback if un.md",
+      "x": 20,
+      "y": 2940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_normalizer_rationale_86",
+      "type": "file",
+      "file": "Produce a canonical RawArticle from any source's raw fields.     Returns None if.md",
+      "x": 220,
+      "y": 2940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_normalizer_rationale_30",
+      "type": "file",
+      "file": "SHA-256 of canonical URL \u2014 stable primary key..md",
+      "x": 420,
+      "y": 2940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_normalizer_rationale_17",
+      "type": "file",
+      "file": "Strip query params that don't affect content identity (tracking params etc)..md",
+      "x": 20,
+      "y": 3020,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_unit_misc_testnormalizer",
+      "type": "file",
+      "file": "TestNormalizer.md",
+      "x": 220,
+      "y": 3020,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_normalizer_article_id",
+      "type": "file",
+      "file": "article_id().md",
+      "x": 420,
+      "y": 3020,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_normalizer_canonical_url",
+      "type": "file",
+      "file": "canonical_url().md",
+      "x": 20,
+      "y": 3100,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_published_at_never_null_rationale_49",
+      "type": "file",
+      "file": "normalize_article accepts an explicit datetime object..md",
+      "x": 220,
+      "y": 3100,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_published_at_never_null_rationale_76",
+      "type": "file",
+      "file": "normalize_article must return None when URL is missing..md",
+      "x": 420,
+      "y": 3100,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_published_at_never_null_rationale_12",
+      "type": "file",
+      "file": "normalize_article must return None when published_at is completely unavailable..md",
+      "x": 20,
+      "y": 3180,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_published_at_never_null_rationale_65",
+      "type": "file",
+      "file": "normalize_article must return None when title is missing..md",
+      "x": 220,
+      "y": 3180,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_published_at_never_null_rationale_32",
+      "type": "file",
+      "file": "normalize_article must set published_at when a valid date string is provided..md",
+      "x": 420,
+      "y": 3180,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_normalizer_normalize_article",
+      "type": "file",
+      "file": "normalize_article().md",
+      "x": 20,
+      "y": 3260,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_normalizer_py",
+      "type": "file",
+      "file": "normalizer.py.md",
+      "x": 220,
+      "y": 3260,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_normalizer_parse_datetime",
+      "type": "file",
+      "file": "parse_datetime().md",
+      "x": 420,
+      "y": 3260,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_normalizer_strip_html",
+      "type": "file",
+      "file": "strip_html().md",
+      "x": 20,
+      "y": 3340,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_published_at_never_null_test_published_at_always_utc",
+      "type": "file",
+      "file": "test_published_at_always_utc().md",
+      "x": 220,
+      "y": 3340,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_tests_unit_test_published_at_never_null_py",
+      "type": "file",
+      "file": "test_published_at_never_null.py.md",
+      "x": 420,
+      "y": 3340,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_published_at_never_null_test_published_at_never_null_accepts_valid_date",
+      "type": "file",
+      "file": "test_published_at_never_null_accepts_valid_date().md",
+      "x": 20,
+      "y": 3420,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_published_at_never_null_test_published_at_never_null_rejects_if_missing",
+      "type": "file",
+      "file": "test_published_at_never_null_rejects_if_missing().md",
+      "x": 220,
+      "y": 3420,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_published_at_never_null_test_published_at_never_null_rejects_missing_title",
+      "type": "file",
+      "file": "test_published_at_never_null_rejects_missing_title().md",
+      "x": 420,
+      "y": 3420,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_published_at_never_null_test_published_at_never_null_rejects_missing_url",
+      "type": "file",
+      "file": "test_published_at_never_null_rejects_missing_url().md",
+      "x": 20,
+      "y": 3500,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_published_at_never_null_test_published_at_never_null_uses_datetime_directly",
+      "type": "file",
+      "file": "test_published_at_never_null_uses_datetime_directly().md",
+      "x": 220,
+      "y": 3500,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g8",
+      "type": "group",
+      "label": "Async DB & Celery Workers",
+      "x": 2060,
+      "y": 2700,
+      "width": 1100,
+      "height": 1020,
+      "color": "3"
+    },
+    {
+      "id": "n_storage_database_rationale_1",
+      "type": "file",
+      "file": "Async SQLAlchemy engine + session factory..md",
+      "x": 2080,
+      "y": 2780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_enrichment_tasks_rationale_1",
+      "type": "file",
+      "file": "Celery tasks wrapping enrichment operations..md",
+      "x": 2280,
+      "y": 2780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_intelligence_tasks_rationale_1",
+      "type": "file",
+      "file": "Celery tasks wrapping intelligence operations..md",
+      "x": 2480,
+      "y": 2780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_enrichment_tasks_rationale_85",
+      "type": "file",
+      "file": "Daily macro data sync from FRED..md",
+      "x": 2080,
+      "y": 2860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_enrichment_tasks_rationale_21",
+      "type": "file",
+      "file": "Embed + score significance + compute price reactions for new articles..md",
+      "x": 2280,
+      "y": 2860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_intelligence_tasks_rationale_53",
+      "type": "file",
+      "file": "Manually triggered intelligence cycle \u2014 called from API..md",
+      "x": 2480,
+      "y": 2860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_enrichment_tasks_rationale_69",
+      "type": "file",
+      "file": "Nightly price sync for all watchlist tickers..md",
+      "x": 2080,
+      "y": 2940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_enrichment_tasks_enrichment_async",
+      "type": "file",
+      "file": "_enrichment_async().md",
+      "x": 2280,
+      "y": 2940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_intelligence_tasks_intelligence_cycle_async",
+      "type": "file",
+      "file": "_intelligence_cycle_async().md",
+      "x": 2480,
+      "y": 2940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_enrichment_tasks_macro_sync_async",
+      "type": "file",
+      "file": "_macro_sync_async().md",
+      "x": 2080,
+      "y": 3020,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_enrichment_tasks_price_sync_async",
+      "type": "file",
+      "file": "_price_sync_async().md",
+      "x": 2280,
+      "y": 3020,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_intelligence_tasks_regime_async",
+      "type": "file",
+      "file": "_regime_async().md",
+      "x": 2480,
+      "y": 3020,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_enrichment_tasks_run_async",
+      "type": "file",
+      "file": "_run_async()_1.md",
+      "x": 2080,
+      "y": 3100,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_intelligence_tasks_run_async",
+      "type": "file",
+      "file": "_run_async()_2.md",
+      "x": 2280,
+      "y": 3100,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_storage_database_py",
+      "type": "file",
+      "file": "database.py.md",
+      "x": 2480,
+      "y": 3100,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_enrichment_tasks_py",
+      "type": "file",
+      "file": "enrichment_tasks.py.md",
+      "x": 2080,
+      "y": 3180,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_storage_database_get_db",
+      "type": "file",
+      "file": "get_db().md",
+      "x": 2280,
+      "y": 3180,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_storage_database_get_session",
+      "type": "file",
+      "file": "get_session().md",
+      "x": 2480,
+      "y": 3180,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_intelligence_tasks_py",
+      "type": "file",
+      "file": "intelligence_tasks.py.md",
+      "x": 2080,
+      "y": 3260,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_enrichment_tasks_run_article_enrichment",
+      "type": "file",
+      "file": "run_article_enrichment().md",
+      "x": 2280,
+      "y": 3260,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_intelligence_tasks_run_intelligence_cycle",
+      "type": "file",
+      "file": "run_intelligence_cycle()_1.md",
+      "x": 2480,
+      "y": 3260,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_enrichment_tasks_run_macro_sync",
+      "type": "file",
+      "file": "run_macro_sync().md",
+      "x": 2080,
+      "y": 3340,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_enrichment_tasks_run_price_sync",
+      "type": "file",
+      "file": "run_price_sync().md",
+      "x": 2280,
+      "y": 3340,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_intelligence_tasks_run_regime_classification",
+      "type": "file",
+      "file": "run_regime_classification()_1.md",
+      "x": 2480,
+      "y": 3340,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_intelligence_tasks_trigger_intelligence_manual",
+      "type": "file",
+      "file": "trigger_intelligence_manual().md",
+      "x": 2080,
+      "y": 3420,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g9",
+      "type": "group",
+      "label": "Macro & Regime Analysis",
+      "x": 3900,
+      "y": 2700,
+      "width": 1100,
+      "height": 920,
+      "color": "4"
+    },
+    {
+      "id": "n_unit_test_unit_misc_testregimeclassifier_test_compressed_vix",
+      "type": "file",
+      "file": ".test_compressed_vix().md",
+      "x": 3920,
+      "y": 2780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_unit_misc_testregimeclassifier_test_confidence_drops_with_missing_data",
+      "type": "file",
+      "file": ".test_confidence_drops_with_missing_data().md",
+      "x": 4120,
+      "y": 2780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_unit_misc_testregimeclassifier_test_fearful_sentiment_extreme_vix",
+      "type": "file",
+      "file": ".test_fearful_sentiment_extreme_vix().md",
+      "x": 4320,
+      "y": 2780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_unit_misc_testregimeclassifier_test_full_data_high_confidence",
+      "type": "file",
+      "file": ".test_full_data_high_confidence().md",
+      "x": 3920,
+      "y": 2860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_unit_misc_testregimeclassifier_test_panic_vix",
+      "type": "file",
+      "file": ".test_panic_vix().md",
+      "x": 4120,
+      "y": 2860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_unit_misc_testregimeclassifier_test_recession_risk_inverted_curve",
+      "type": "file",
+      "file": ".test_recession_risk_inverted_curve().md",
+      "x": 4320,
+      "y": 2860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_unit_misc_testregimeclassifier_test_stressed_liquidity_high_spreads",
+      "type": "file",
+      "file": ".test_stressed_liquidity_high_spreads().md",
+      "x": 3920,
+      "y": 2940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_regime_classifier_rationale_14",
+      "type": "file",
+      "file": "Apply deterministic rules to classify current market regime across all 4 dimensi.md",
+      "x": 4120,
+      "y": 2940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_regime_classifier_rationale_135",
+      "type": "file",
+      "file": "Confidence based on how many macro series have current data..md",
+      "x": 4320,
+      "y": 2940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_regime_classifier_rationale_1",
+      "type": "file",
+      "file": "Deterministic market regime classification from macro data..md",
+      "x": 3920,
+      "y": 3020,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_regime_classifier_rationale_171",
+      "type": "file",
+      "file": "Full classification pipeline fetch macro \u2192 classify \u2192 persist..md",
+      "x": 4120,
+      "y": 3020,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_schemas_macrosnapshot",
+      "type": "file",
+      "file": "MacroSnapshot.md",
+      "x": 4320,
+      "y": 3020,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_schemas_rationale_30",
+      "type": "file",
+      "file": "Point-in-time macro data snapshot \u2014 no look-ahead bias..md",
+      "x": 3920,
+      "y": 3100,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_macro_fetcher_rationale_128",
+      "type": "file",
+      "file": "Returns a MacroSnapshot for a given datetime \u2014 no look-ahead bias.     Uses late.md",
+      "x": 4120,
+      "y": 3100,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_unit_misc_testregimeclassifier",
+      "type": "file",
+      "file": "TestRegimeClassifier.md",
+      "x": 4320,
+      "y": 3100,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_regime_classifier_classify_liquidity",
+      "type": "file",
+      "file": "_classify_liquidity().md",
+      "x": 3920,
+      "y": 3180,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_regime_classifier_classify_macro",
+      "type": "file",
+      "file": "_classify_macro().md",
+      "x": 4120,
+      "y": 3180,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_regime_classifier_classify_sentiment",
+      "type": "file",
+      "file": "_classify_sentiment().md",
+      "x": 4320,
+      "y": 3180,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_regime_classifier_classify_volatility",
+      "type": "file",
+      "file": "_classify_volatility().md",
+      "x": 3920,
+      "y": 3260,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_regime_classifier_compute_confidence",
+      "type": "file",
+      "file": "_compute_confidence().md",
+      "x": 4120,
+      "y": 3260,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_regime_classifier_classify_regime",
+      "type": "file",
+      "file": "classify_regime().md",
+      "x": 4320,
+      "y": 3260,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_macro_fetcher_get_macro_snapshot",
+      "type": "file",
+      "file": "get_macro_snapshot().md",
+      "x": 3920,
+      "y": 3340,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_regime_classifier_py",
+      "type": "file",
+      "file": "regime_classifier.py.md",
+      "x": 4120,
+      "y": 3340,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_intelligence_regime_classifier_run_regime_classification",
+      "type": "file",
+      "file": "run_regime_classification().md",
+      "x": 4320,
+      "y": 3340,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g10",
+      "type": "group",
+      "label": "Source Feed Configuration",
+      "x": 5740,
+      "y": 2700,
+      "width": 1100,
+      "height": 820,
+      "color": "5"
+    },
+    {
+      "id": "n_config_sources_rationale_1",
+      "type": "file",
+      "file": "All RSS feed URLs, API endpoints, and source trust tier assignments..md",
+      "x": 5760,
+      "y": 2780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_config_sources_rationale_292",
+      "type": "file",
+      "file": "Build a Google News RSS URL for a given search query..md",
+      "x": 5960,
+      "y": 2780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_rss_fetcher_rationale_110",
+      "type": "file",
+      "file": "Convert a feedparser entry to a RawArticle.     Never raises \u2014 returns None on i.md",
+      "x": 6160,
+      "y": 2780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_rss_fetcher_rationale_35",
+      "type": "file",
+      "file": "Dynamically build Google News RSS feeds for all watchlist tickers..md",
+      "x": 5760,
+      "y": 2860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_exception",
+      "type": "file",
+      "file": "Exception.md",
+      "x": 5960,
+      "y": 2860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_rss_fetcher_feedfetcherror",
+      "type": "file",
+      "file": "FeedFetchError.md",
+      "x": 6160,
+      "y": 2860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_rss_fetcher_feedparseerror",
+      "type": "file",
+      "file": "FeedParseError.md",
+      "x": 5760,
+      "y": 2940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_rss_fetcher_rationale_151",
+      "type": "file",
+      "file": "Fetch all active RSS feeds concurrently (semaphore=10).     Aggregates results..md",
+      "x": 5960,
+      "y": 2940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_rss_fetcher_rationale_71",
+      "type": "file",
+      "file": "Fetch one RSS feed. Returns normalized RawArticle objects.     Raises FeedFetchE.md",
+      "x": 6160,
+      "y": 2940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_config_sources_sourcefeed",
+      "type": "file",
+      "file": "SourceFeed.md",
+      "x": 5760,
+      "y": 3020,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_rss_fetcher_build_macro_google_news_feeds",
+      "type": "file",
+      "file": "_build_macro_google_news_feeds().md",
+      "x": 5960,
+      "y": 3020,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_rss_fetcher_build_ticker_google_news_feeds",
+      "type": "file",
+      "file": "_build_ticker_google_news_feeds().md",
+      "x": 6160,
+      "y": 3020,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_config_sources_build_google_news_url",
+      "type": "file",
+      "file": "build_google_news_url().md",
+      "x": 5760,
+      "y": 3100,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_rss_fetcher_rationale_1",
+      "type": "file",
+      "file": "feedparser-based RSSAtom ingestion for all tier 1, 2A, 2B, 2C sources..md",
+      "x": 5960,
+      "y": 3100,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_rss_fetcher_fetch_all_feeds",
+      "type": "file",
+      "file": "fetch_all_feeds().md",
+      "x": 6160,
+      "y": 3100,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_rss_fetcher_fetch_feed",
+      "type": "file",
+      "file": "fetch_feed().md",
+      "x": 5760,
+      "y": 3180,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_rss_fetcher_get_all_rss_feeds",
+      "type": "file",
+      "file": "get_all_rss_feeds().md",
+      "x": 5960,
+      "y": 3180,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_rss_fetcher_normalize_rss_item",
+      "type": "file",
+      "file": "normalize_rss_item().md",
+      "x": 6160,
+      "y": 3180,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_rss_fetcher_py",
+      "type": "file",
+      "file": "rss_fetcher.py.md",
+      "x": 5760,
+      "y": 3260,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_config_sources_py",
+      "type": "file",
+      "file": "sources.py.md",
+      "x": 5960,
+      "y": 3260,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g11",
+      "type": "group",
+      "label": "Deduplication Pipeline",
+      "x": 7360,
+      "y": 2700,
+      "width": 1100,
+      "height": 820,
+      "color": "6"
+    },
+    {
+      "id": "n_unit_test_duplicate_not_written_twice_rationale_1",
+      "type": "file",
+      "file": "CRITICAL TEST test_duplicate_not_written_twice Data integrity \u2014 the two-stage d.md",
+      "x": 7380,
+      "y": 2780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_deduplicator_rationale_28",
+      "type": "file",
+      "file": "O(1) Redis lookup \u2014 primary dedup gate..md",
+      "x": 7580,
+      "y": 2780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_deduplicator_rationale_107",
+      "type": "file",
+      "file": "Run full dedup pipeline on a batch.     URL check first (fast), content check se.md",
+      "x": 7780,
+      "y": 2780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_deduplicator_rationale_41",
+      "type": "file",
+      "file": "Semantic duplicate check via pgvector cosine similarity.     Only runs after URL.md",
+      "x": 7380,
+      "y": 2860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_duplicate_not_written_twice_rationale_32",
+      "type": "file",
+      "file": "Stage 1 Same URL submitted twice \u2014 second must be suppressed..md",
+      "x": 7580,
+      "y": 2860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_duplicate_not_written_twice_rationale_49",
+      "type": "file",
+      "file": "Stage 2 Two articles with different URLs but same semantic content must dedupli.md",
+      "x": 7780,
+      "y": 2860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_duplicate_not_written_twice_rationale_84",
+      "type": "file",
+      "file": "Three completely different articles must all pass..md",
+      "x": 7380,
+      "y": 2940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_deduplicator_rationale_1",
+      "type": "file",
+      "file": "Two-stage deduplication URL hash (Redis) then semantic (pgvector)..md",
+      "x": 7580,
+      "y": 2940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_deduplicator_url_hash",
+      "type": "file",
+      "file": "_url_hash().md",
+      "x": 7780,
+      "y": 2940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_deduplicator_deduplicate_batch",
+      "type": "file",
+      "file": "deduplicate_batch().md",
+      "x": 7380,
+      "y": 3020,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_deduplicator_py",
+      "type": "file",
+      "file": "deduplicator.py.md",
+      "x": 7580,
+      "y": 3020,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_deduplicator_is_duplicate_content",
+      "type": "file",
+      "file": "is_duplicate_content().md",
+      "x": 7780,
+      "y": 3020,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_deduplicator_is_duplicate_url",
+      "type": "file",
+      "file": "is_duplicate_url().md",
+      "x": 7380,
+      "y": 3100,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_duplicate_not_written_twice_make_article",
+      "type": "file",
+      "file": "make_article().md",
+      "x": 7580,
+      "y": 3100,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_deduplicator_mark_url_seen",
+      "type": "file",
+      "file": "mark_url_seen().md",
+      "x": 7780,
+      "y": 3100,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_tests_unit_test_duplicate_not_written_twice_py",
+      "type": "file",
+      "file": "test_duplicate_not_written_twice.py.md",
+      "x": 7380,
+      "y": 3180,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_duplicate_not_written_twice_test_duplicate_not_written_twice_semantic_dedup",
+      "type": "file",
+      "file": "test_duplicate_not_written_twice_semantic_dedup().md",
+      "x": 7580,
+      "y": 3180,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_duplicate_not_written_twice_test_duplicate_not_written_twice_url_dedup",
+      "type": "file",
+      "file": "test_duplicate_not_written_twice_url_dedup().md",
+      "x": 7780,
+      "y": 3180,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_duplicate_not_written_twice_test_unique_articles_all_pass_dedup",
+      "type": "file",
+      "file": "test_unique_articles_all_pass_dedup().md",
+      "x": 7380,
+      "y": 3260,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g12",
+      "type": "group",
+      "label": "DB Migrations",
+      "x": 8980,
+      "y": 2700,
+      "width": 1100,
+      "height": 820,
+      "color": "1"
+    },
+    {
+      "id": "n_storage_migrations_env",
+      "type": "file",
+      "file": "Alembic Migration Environment.md",
+      "x": 9000,
+      "y": 2780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_migrations_env_rationale_1",
+      "type": "file",
+      "file": "Alembic environment configuration for async SQLAlchemy..md",
+      "x": 9200,
+      "y": 2780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_migration_initial_schema",
+      "type": "file",
+      "file": "Initial DB Schema Migration (0001).md",
+      "x": 9400,
+      "y": 2780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_orm_article",
+      "type": "file",
+      "file": "ORM Model Article.md",
+      "x": 9000,
+      "y": 2860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_orm_article_ticker_effect",
+      "type": "file",
+      "file": "ORM Model ArticleTickerEffect.md",
+      "x": 9200,
+      "y": 2860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_orm_bootstrap_state",
+      "type": "file",
+      "file": "ORM Model BootstrapState.md",
+      "x": 9400,
+      "y": 2860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_orm_embedding",
+      "type": "file",
+      "file": "ORM Model Embedding.md",
+      "x": 9000,
+      "y": 2940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_orm_historical_event",
+      "type": "file",
+      "file": "ORM Model HistoricalEvent.md",
+      "x": 9200,
+      "y": 2940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_orm_intelligence_object",
+      "type": "file",
+      "file": "ORM Model IntelligenceObject.md",
+      "x": 9400,
+      "y": 2940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_orm_macro_data",
+      "type": "file",
+      "file": "ORM Model MacroData.md",
+      "x": 9000,
+      "y": 3020,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_orm_price",
+      "type": "file",
+      "file": "ORM Model Price.md",
+      "x": 9200,
+      "y": 3020,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_orm_regime_snapshot",
+      "type": "file",
+      "file": "ORM Model RegimeSnapshot.md",
+      "x": 9400,
+      "y": 3020,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_orm_source_feed",
+      "type": "file",
+      "file": "ORM Model SourceFeed.md",
+      "x": 9000,
+      "y": 3100,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_db",
+      "type": "file",
+      "file": "ORM Models (db.py).md",
+      "x": 9200,
+      "y": 3100,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_migrations_env_do_run_migrations",
+      "type": "file",
+      "file": "do_run_migrations().md",
+      "x": 9400,
+      "y": 3100,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_storage_migrations_env_py",
+      "type": "file",
+      "file": "env.py.md",
+      "x": 9000,
+      "y": 3180,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_migrations_env_run_async_migrations",
+      "type": "file",
+      "file": "run_async_migrations().md",
+      "x": 9200,
+      "y": 3180,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_migrations_env_run_migrations_offline",
+      "type": "file",
+      "file": "run_migrations_offline().md",
+      "x": 9400,
+      "y": 3180,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_migrations_env_run_migrations_online",
+      "type": "file",
+      "file": "run_migrations_online().md",
+      "x": 9000,
+      "y": 3260,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g13",
+      "type": "group",
+      "label": "Price Data & Abnormal Returns",
+      "x": 10380,
+      "y": 2700,
+      "width": 1100,
+      "height": 720,
+      "color": "2"
+    },
+    {
+      "id": "n_ingestion_price_fetcher_rationale_158",
+      "type": "file",
+      "file": "Compute abnormal return relative to SPY for a given ticker and event date.     U.md",
+      "x": 10400,
+      "y": 2780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_price_fetcher_rationale_55",
+      "type": "file",
+      "file": "Fetch last 5 trading days for all tickers. Upserts into prices table.     Handle.md",
+      "x": 10600,
+      "y": 2780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_enrichment_price_reactor_rationale_19",
+      "type": "file",
+      "file": "For each ticker mentioned in an article, compute and persist     - price at pub.md",
+      "x": 10800,
+      "y": 2780,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_price_fetcher_rationale_30",
+      "type": "file",
+      "file": "One-time function. Fetches period='max' for each ticker.     Skips tickers that.md",
+      "x": 10400,
+      "y": 2860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_price_fetcher_rationale_130",
+      "type": "file",
+      "file": "Returns adjusted close price for a ticker on a given date.     Returns None if n.md",
+      "x": 10600,
+      "y": 2860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_price_fetcher_fetch_price_series",
+      "type": "file",
+      "file": "_fetch_price_series().md",
+      "x": 10800,
+      "y": 2860,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_price_fetcher_fetch_yfinance",
+      "type": "file",
+      "file": "_fetch_yfinance().md",
+      "x": 10400,
+      "y": 2940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_price_fetcher_fetch_yfinance_sync",
+      "type": "file",
+      "file": "_fetch_yfinance_sync().md",
+      "x": 10600,
+      "y": 2940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_price_fetcher_label_reaction",
+      "type": "file",
+      "file": "_label_reaction().md",
+      "x": 10800,
+      "y": 2940,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_price_fetcher_upsert_prices",
+      "type": "file",
+      "file": "_upsert_prices().md",
+      "x": 10400,
+      "y": 3020,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_price_fetcher_bootstrap_price_history",
+      "type": "file",
+      "file": "bootstrap_price_history().md",
+      "x": 10600,
+      "y": 3020,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_price_fetcher_compute_abnormal_return",
+      "type": "file",
+      "file": "compute_abnormal_return().md",
+      "x": 10800,
+      "y": 3020,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_enrichment_price_reactor_compute_and_store_price_reactions",
+      "type": "file",
+      "file": "compute_and_store_price_reactions().md",
+      "x": 10400,
+      "y": 3100,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_price_fetcher_get_price_at",
+      "type": "file",
+      "file": "get_price_at().md",
+      "x": 10600,
+      "y": 3100,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_price_fetcher_py",
+      "type": "file",
+      "file": "price_fetcher.py.md",
+      "x": 10800,
+      "y": 3100,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_price_fetcher_sync_daily_prices",
+      "type": "file",
+      "file": "sync_daily_prices().md",
+      "x": 10400,
+      "y": 3180,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_ingestion_price_fetcher_rationale_1",
+      "type": "file",
+      "file": "yfinance price data \u2014 historical bootstrap and daily sync..md",
+      "x": 10600,
+      "y": 3180,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g14",
+      "type": "group",
+      "label": "ORM Schema Layer",
+      "x": 0,
+      "y": 3900,
+      "width": 880,
+      "height": 620,
+      "color": "3"
+    },
+    {
+      "id": "n_models_db_article",
+      "type": "file",
+      "file": "Article.md",
+      "x": 20,
+      "y": 3980,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_db_articletickereffect",
+      "type": "file",
+      "file": "ArticleTickerEffect.md",
+      "x": 220,
+      "y": 3980,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_db_base",
+      "type": "file",
+      "file": "Base.md",
+      "x": 420,
+      "y": 3980,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_db_bootstrapstate",
+      "type": "file",
+      "file": "BootstrapState.md",
+      "x": 20,
+      "y": 4060,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_declarativebase",
+      "type": "file",
+      "file": "DeclarativeBase.md",
+      "x": 220,
+      "y": 4060,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_db_embedding",
+      "type": "file",
+      "file": "Embedding.md",
+      "x": 420,
+      "y": 4060,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_db_historicalevent",
+      "type": "file",
+      "file": "HistoricalEvent.md",
+      "x": 20,
+      "y": 4140,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_db_intelligenceobject",
+      "type": "file",
+      "file": "IntelligenceObject.md",
+      "x": 220,
+      "y": 4140,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_db_macrodata",
+      "type": "file",
+      "file": "MacroData.md",
+      "x": 420,
+      "y": 4140,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_db_price",
+      "type": "file",
+      "file": "Price.md",
+      "x": 20,
+      "y": 4220,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_db_regimesnapshot",
+      "type": "file",
+      "file": "RegimeSnapshot.md",
+      "x": 220,
+      "y": 4220,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_db_rationale_1",
+      "type": "file",
+      "file": "SQLAlchemy 2.0 async ORM models \u2014 canonical schema for all 9 tables..md",
+      "x": 420,
+      "y": 4220,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_db_sourcefeed",
+      "type": "file",
+      "file": "SourceFeed_1.md",
+      "x": 20,
+      "y": 4300,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_db_rationale_172",
+      "type": "file",
+      "file": "Tracks resumable bootstrap progress..md",
+      "x": 220,
+      "y": 4300,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_models_db_py",
+      "type": "file",
+      "file": "db.py.md",
+      "x": 420,
+      "y": 4300,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g15",
+      "type": "group",
+      "label": "Embedding (OpenAI)",
+      "x": 2060,
+      "y": 3900,
+      "width": 880,
+      "height": 620,
+      "color": "4"
+    },
+    {
+      "id": "n_enrichment_embedder_rationale_110",
+      "type": "file",
+      "file": "Batch embedding \u2014 minimizes OpenAI API round trips.     Max 2048 inputs per API.md",
+      "x": 2080,
+      "y": 3980,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_scripts_backfill_embeddings_rationale_1",
+      "type": "file",
+      "file": "Embed all bootstrapped articles that haven't been embedded yet. Run overnight af.md",
+      "x": 2280,
+      "y": 3980,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_enrichment_embedder_rationale_51",
+      "type": "file",
+      "file": "Fetch article from DB, embed title+summary, write to embeddings table.     Updat.md",
+      "x": 2480,
+      "y": 3980,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_enrichment_embedder_rationale_1",
+      "type": "file",
+      "file": "OpenAI text-embedding-3-small generation and storage..md",
+      "x": 2080,
+      "y": 4060,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_enrichment_embedder_build_embed_input",
+      "type": "file",
+      "file": "_build_embed_input().md",
+      "x": 2280,
+      "y": 4060,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_enrichment_embedder_content_hash",
+      "type": "file",
+      "file": "_content_hash().md",
+      "x": 2480,
+      "y": 4060,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_enrichment_embedder_embed_texts",
+      "type": "file",
+      "file": "_embed_texts().md",
+      "x": 2080,
+      "y": 4140,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_enrichment_embedder_get_client",
+      "type": "file",
+      "file": "_get_client()_1.md",
+      "x": 2280,
+      "y": 4140,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_scripts_backfill_embeddings_backfill",
+      "type": "file",
+      "file": "backfill().md",
+      "x": 2480,
+      "y": 4140,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_scripts_backfill_embeddings_py",
+      "type": "file",
+      "file": "backfill_embeddings.py.md",
+      "x": 2080,
+      "y": 4220,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_enrichment_embedder_embed_article",
+      "type": "file",
+      "file": "embed_article().md",
+      "x": 2280,
+      "y": 4220,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_enrichment_embedder_embed_batch",
+      "type": "file",
+      "file": "embed_batch().md",
+      "x": 2480,
+      "y": 4220,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_enrichment_embedder_py",
+      "type": "file",
+      "file": "embedder.py.md",
+      "x": 2080,
+      "y": 4300,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g16",
+      "type": "group",
+      "label": "Logging Infrastructure",
+      "x": 3900,
+      "y": 3900,
+      "width": 880,
+      "height": 520,
+      "color": "5"
+    },
+    {
+      "id": "n_config_log_stdlibadapter_init",
+      "type": "file",
+      "file": ".__init__().md",
+      "x": 3920,
+      "y": 3980,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_config_log_stdlibadapter_debug",
+      "type": "file",
+      "file": ".debug().md",
+      "x": 4120,
+      "y": 3980,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_config_log_stdlibadapter_error",
+      "type": "file",
+      "file": ".error().md",
+      "x": 4320,
+      "y": 3980,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_config_log_stdlibadapter_exception",
+      "type": "file",
+      "file": ".exception().md",
+      "x": 3920,
+      "y": 4060,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_config_log_stdlibadapter_info",
+      "type": "file",
+      "file": ".info().md",
+      "x": 4120,
+      "y": 4060,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_config_log_stdlibadapter_warn",
+      "type": "file",
+      "file": ".warn().md",
+      "x": 4320,
+      "y": 4060,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_config_log_stdlibadapter_warning",
+      "type": "file",
+      "file": ".warning().md",
+      "x": 3920,
+      "y": 4140,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_config_log_rationale_1",
+      "type": "file",
+      "file": "Structlog compatibility shim \u2014 falls back to stdlib logging when structlog not i.md",
+      "x": 4120,
+      "y": 4140,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_config_log_stdlibadapter",
+      "type": "file",
+      "file": "_StdlibAdapter.md",
+      "x": 4320,
+      "y": 4140,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_config_log_get_logger",
+      "type": "file",
+      "file": "get_logger().md",
+      "x": 3920,
+      "y": 4220,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_config_log_py",
+      "type": "file",
+      "file": "log.py.md",
+      "x": 4120,
+      "y": 4220,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g17",
+      "type": "group",
+      "label": "Feed Health Monitoring",
+      "x": 5740,
+      "y": 3900,
+      "width": 660,
+      "height": 420,
+      "color": "6"
+    },
+    {
+      "id": "n_monitoring_health_checker_rationale_12",
+      "type": "file",
+      "file": "Check all active feeds for staleness.     A feed is unhealthy if last_fetched_at.md",
+      "x": 5760,
+      "y": 3980,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_monitoring_health_checker_rationale_87",
+      "type": "file",
+      "file": "Count articles awaiting embedding..md",
+      "x": 5960,
+      "y": 3980,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_monitoring_health_checker_rationale_1",
+      "type": "file",
+      "file": "Feed health monitoring and ingestion lag detection..md",
+      "x": 6160,
+      "y": 3980,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_monitoring_health_checker_rationale_95",
+      "type": "file",
+      "file": "Returns True if no articles have been ingested in the last threshold_minutes..md",
+      "x": 5760,
+      "y": 4060,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_monitoring_health_checker_check_feeds",
+      "type": "file",
+      "file": "_check_feeds().md",
+      "x": 5960,
+      "y": 4060,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_monitoring_health_checker_check_feed_health",
+      "type": "file",
+      "file": "check_feed_health().md",
+      "x": 6160,
+      "y": 4060,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_monitoring_health_checker_detect_ingestion_stall",
+      "type": "file",
+      "file": "detect_ingestion_stall().md",
+      "x": 5760,
+      "y": 4140,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_monitoring_health_checker_get_embedding_backlog",
+      "type": "file",
+      "file": "get_embedding_backlog().md",
+      "x": 5960,
+      "y": 4140,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_monitoring_health_checker_py",
+      "type": "file",
+      "file": "health_checker.py.md",
+      "x": 6160,
+      "y": 4140,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g18",
+      "type": "group",
+      "label": "Hallucination Guard Tests",
+      "x": 7360,
+      "y": 3900,
+      "width": 660,
+      "height": 420,
+      "color": "1"
+    },
+    {
+      "id": "n_unit_test_no_hallucination_beyond_context_rationale_1",
+      "type": "file",
+      "file": "CRITICAL TEST test_no_hallucination_beyond_context Intelligence quality \u2014 Claud.md",
+      "x": 7380,
+      "y": 3980,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_no_hallucination_beyond_context_rationale_16",
+      "type": "file",
+      "file": "If Claude returns tickers not in context_package.tickers, they must be stripped..md",
+      "x": 7580,
+      "y": 3980,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_no_hallucination_beyond_context_rationale_105",
+      "type": "file",
+      "file": "Intelligence object with empty confidence_explanation must be rejected entirely..md",
+      "x": 7780,
+      "y": 3980,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_no_hallucination_beyond_context_rationale_65",
+      "type": "file",
+      "file": "Tickers that ARE in context must not be stripped..md",
+      "x": 7380,
+      "y": 4060,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_no_hallucination_beyond_context_test_all_valid_tickers_preserved",
+      "type": "file",
+      "file": "test_all_valid_tickers_preserved().md",
+      "x": 7580,
+      "y": 4060,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_no_hallucination_beyond_context_test_empty_confidence_explanation_rejected",
+      "type": "file",
+      "file": "test_empty_confidence_explanation_rejected().md",
+      "x": 7780,
+      "y": 4060,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_unit_test_no_hallucination_beyond_context_test_hallucinated_tickers_stripped",
+      "type": "file",
+      "file": "test_hallucinated_tickers_stripped().md",
+      "x": 7380,
+      "y": 4140,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_tests_unit_test_no_hallucination_beyond_context_py",
+      "type": "file",
+      "file": "test_no_hallucination_beyond_context.py.md",
+      "x": 7580,
+      "y": 4140,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g19",
+      "type": "group",
+      "label": "Ticker Extraction (spaCy+Regex)",
+      "x": 8980,
+      "y": 3900,
+      "width": 660,
+      "height": 420,
+      "color": "2"
+    },
+    {
+      "id": "n_enrichment_ticker_extractor_rationale_25",
+      "type": "file",
+      "file": "Build and cache a map from company name variants to ticker symbols.     Sources.md",
+      "x": 9000,
+      "y": 3980,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_enrichment_ticker_extractor_rationale_78",
+      "type": "file",
+      "file": "Multi-pass ticker extraction     1. Regex for explicit $TICKER and NYSETICKER.md",
+      "x": 9200,
+      "y": 3980,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_enrichment_ticker_extractor_get_company_map",
+      "type": "file",
+      "file": "_get_company_map().md",
+      "x": 9400,
+      "y": 3980,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_enrichment_ticker_extractor_load_spacy",
+      "type": "file",
+      "file": "_load_spacy().md",
+      "x": 9000,
+      "y": 4060,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_enrichment_ticker_extractor_build_company_ticker_map",
+      "type": "file",
+      "file": "build_company_ticker_map().md",
+      "x": 9200,
+      "y": 4060,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_enrichment_ticker_extractor_extract_tickers",
+      "type": "file",
+      "file": "extract_tickers().md",
+      "x": 9400,
+      "y": 4060,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_enrichment_ticker_extractor_rationale_1",
+      "type": "file",
+      "file": "spaCy + regex ticker extraction. Three-pass approach..md",
+      "x": 9000,
+      "y": 4140,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_enrichment_ticker_extractor_py",
+      "type": "file",
+      "file": "ticker_extractor.py.md",
+      "x": 9200,
+      "y": 4140,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g20",
+      "type": "group",
+      "label": "Settings (BaseSettings)",
+      "x": 10380,
+      "y": 3900,
+      "width": 600,
+      "height": 400,
+      "color": "3"
+    },
+    {
+      "id": "n_config_settings_rationale_1",
+      "type": "file",
+      "file": "All environment variables, constants, and thresholds. Read from environment \u2014 ne.md",
+      "x": 10400,
+      "y": 3980,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_basesettings",
+      "type": "file",
+      "file": "BaseSettings.md",
+      "x": 10600,
+      "y": 3980,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_config_settings_settings",
+      "type": "file",
+      "file": "Settings.md",
+      "x": 10800,
+      "y": 3980,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_config_settings_py",
+      "type": "file",
+      "file": "settings.py.md",
+      "x": 10400,
+      "y": 4060,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g21",
+      "type": "group",
+      "label": "Initial Schema Migration",
+      "x": 0,
+      "y": 4600,
+      "width": 600,
+      "height": 400,
+      "color": "4"
+    },
+    {
+      "id": "n_storage_migrations_versions_0001_initial_schema_py",
+      "type": "file",
+      "file": "0001_initial_schema.py.md",
+      "x": 20,
+      "y": 4680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_versions_0001_initial_schema_rationale_1",
+      "type": "file",
+      "file": "Initial schema \u2014 all 9 canonical tables + pgvector + TimescaleDB extensions..md",
+      "x": 220,
+      "y": 4680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_versions_0001_initial_schema_downgrade",
+      "type": "file",
+      "file": "downgrade().md",
+      "x": 420,
+      "y": 4680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_versions_0001_initial_schema_upgrade",
+      "type": "file",
+      "file": "upgrade().md",
+      "x": 20,
+      "y": 4760,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g22",
+      "type": "group",
+      "label": "Celery Beat Schedule",
+      "x": 2060,
+      "y": 4600,
+      "width": 600,
+      "height": 400,
+      "color": "5"
+    },
+    {
+      "id": "n_workers_celery_app_rationale_1",
+      "type": "file",
+      "file": "Celery application init + task registry + beat schedule..md",
+      "x": 2080,
+      "y": 4680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_celery_app_rationale_77",
+      "type": "file",
+      "file": "No-op \u2014 schedule is registered via app.conf above. Called by main.py to import w.md",
+      "x": 2280,
+      "y": 4680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_celery_app_py",
+      "type": "file",
+      "file": "celery_app.py.md",
+      "x": 2480,
+      "y": 4680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_workers_celery_app_register_beat_schedule",
+      "type": "file",
+      "file": "register_beat_schedule().md",
+      "x": 2080,
+      "y": 4760,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g23",
+      "type": "group",
+      "label": "Scheduler Entry Point",
+      "x": 3900,
+      "y": 4600,
+      "width": 600,
+      "height": 400,
+      "color": "6"
+    },
+    {
+      "id": "n_market_intel_scheduler_rationale_1",
+      "type": "file",
+      "file": "APScheduler entry point \u2014 runs beat-schedule tasks when Celery beat is not used..md",
+      "x": 3920,
+      "y": 4680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_market_intel_scheduler_main",
+      "type": "file",
+      "file": "main().md",
+      "x": 4120,
+      "y": 4680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_scheduler_py",
+      "type": "file",
+      "file": "scheduler.py.md",
+      "x": 4320,
+      "y": 4680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g24",
+      "type": "group",
+      "label": "Dev Entry Point",
+      "x": 5740,
+      "y": 4600,
+      "width": 600,
+      "height": 400,
+      "color": "1"
+    },
+    {
+      "id": "n_market_intel_main_rationale_1",
+      "type": "file",
+      "file": "Dev entry point \u2014 starts API server + scheduler in a single process for local de.md",
+      "x": 5760,
+      "y": 4680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_market_intel_main_main",
+      "type": "file",
+      "file": "main()_1.md",
+      "x": 5960,
+      "y": 4680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_main_py",
+      "type": "file",
+      "file": "main.py.md",
+      "x": 6160,
+      "y": 4680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g25",
+      "type": "group",
+      "label": "Source Validation Script",
+      "x": 7360,
+      "y": 4600,
+      "width": 600,
+      "height": 400,
+      "color": "2"
+    },
+    {
+      "id": "n_scripts_validate_sources_rationale_1",
+      "type": "file",
+      "file": "Smoke test all configured feeds before deployment. Run python scriptsvalidate_.md",
+      "x": 7380,
+      "y": 4680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_scripts_validate_sources_validate",
+      "type": "file",
+      "file": "validate().md",
+      "x": 7580,
+      "y": 4680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_scripts_validate_sources_py",
+      "type": "file",
+      "file": "validate_sources.py.md",
+      "x": 7780,
+      "y": 4680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g26",
+      "type": "group",
+      "label": "DB Dependency Injection",
+      "x": 8980,
+      "y": 4600,
+      "width": 600,
+      "height": 400,
+      "color": "3"
+    },
+    {
+      "id": "n_api_dependencies_rationale_1",
+      "type": "file",
+      "file": "FastAPI dependencies \u2014 DB session, shared clients..md",
+      "x": 9000,
+      "y": 4680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_api_dependencies_py",
+      "type": "file",
+      "file": "dependencies.py.md",
+      "x": 9200,
+      "y": 4680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_api_dependencies_get_db",
+      "type": "file",
+      "file": "get_db()_1.md",
+      "x": 9400,
+      "y": 4680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g27",
+      "type": "group",
+      "label": "Watchlist Config",
+      "x": 10380,
+      "y": 4600,
+      "width": 600,
+      "height": 400,
+      "color": "4"
+    },
+    {
+      "id": "n_config_watchlist_rationale_1",
+      "type": "file",
+      "file": "Tickers and macro topics being monitored. Add tickers here + run bootstrap..md",
+      "x": 10400,
+      "y": 4680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_config_watchlist_py",
+      "type": "file",
+      "file": "watchlist.py.md",
+      "x": 10600,
+      "y": 4680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g28",
+      "type": "group",
+      "label": "Prometheus Metrics",
+      "x": 0,
+      "y": 5080,
+      "width": 600,
+      "height": 400,
+      "color": "5"
+    },
+    {
+      "id": "n_monitoring_metrics_rationale_1",
+      "type": "file",
+      "file": "Prometheus metric definitions for all MIOS subsystems..md",
+      "x": 20,
+      "y": 5160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_monitoring_metrics_py",
+      "type": "file",
+      "file": "metrics.py.md",
+      "x": 220,
+      "y": 5160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g29",
+      "type": "group",
+      "label": "Ingestion Package",
+      "x": 2060,
+      "y": 5080,
+      "width": 600,
+      "height": 400,
+      "color": "6"
+    },
+    {
+      "id": "n_ingestion_init_py",
+      "type": "file",
+      "file": "__init__.py.md",
+      "x": 2080,
+      "y": 5160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g30",
+      "type": "group",
+      "label": "Intelligence Package",
+      "x": 3900,
+      "y": 5080,
+      "width": 600,
+      "height": 400,
+      "color": "1"
+    },
+    {
+      "id": "n_intelligence_init_py",
+      "type": "file",
+      "file": "__init__.py_1.md",
+      "x": 3920,
+      "y": 5160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g31",
+      "type": "group",
+      "label": "Config Package",
+      "x": 5740,
+      "y": 5080,
+      "width": 600,
+      "height": 400,
+      "color": "2"
+    },
+    {
+      "id": "n_config_init_py",
+      "type": "file",
+      "file": "__init__.py_2.md",
+      "x": 5760,
+      "y": 5160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g32",
+      "type": "group",
+      "label": "Tests Package",
+      "x": 7360,
+      "y": 5080,
+      "width": 600,
+      "height": 400,
+      "color": "3"
+    },
+    {
+      "id": "n_tests_init_py",
+      "type": "file",
+      "file": "__init__.py_3.md",
+      "x": 7380,
+      "y": 5160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g33",
+      "type": "group",
+      "label": "Unit Tests Package",
+      "x": 8980,
+      "y": 5080,
+      "width": 600,
+      "height": 400,
+      "color": "4"
+    },
+    {
+      "id": "n_tests_unit_init_py",
+      "type": "file",
+      "file": "__init__.py_4.md",
+      "x": 9000,
+      "y": 5160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g34",
+      "type": "group",
+      "label": "Integration Tests Package",
+      "x": 10380,
+      "y": 5080,
+      "width": 600,
+      "height": 400,
+      "color": "5"
+    },
+    {
+      "id": "n_tests_integration_init_py",
+      "type": "file",
+      "file": "__init__.py_5.md",
+      "x": 10400,
+      "y": 5160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g35",
+      "type": "group",
+      "label": "Models Package",
+      "x": 0,
+      "y": 5560,
+      "width": 600,
+      "height": 400,
+      "color": "6"
+    },
+    {
+      "id": "n_models_init_py",
+      "type": "file",
+      "file": "__init__.py_6.md",
+      "x": 20,
+      "y": 5640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g36",
+      "type": "group",
+      "label": "Storage Package",
+      "x": 2060,
+      "y": 5560,
+      "width": 600,
+      "height": 400,
+      "color": "1"
+    },
+    {
+      "id": "n_storage_init_py",
+      "type": "file",
+      "file": "__init__.py_7.md",
+      "x": 2080,
+      "y": 5640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g37",
+      "type": "group",
+      "label": "Delivery Package",
+      "x": 3900,
+      "y": 5560,
+      "width": 600,
+      "height": 400,
+      "color": "2"
+    },
+    {
+      "id": "n_delivery_init_py",
+      "type": "file",
+      "file": "__init__.py_8.md",
+      "x": 3920,
+      "y": 5640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g38",
+      "type": "group",
+      "label": "API Package",
+      "x": 5740,
+      "y": 5560,
+      "width": 600,
+      "height": 400,
+      "color": "3"
+    },
+    {
+      "id": "n_api_init_py",
+      "type": "file",
+      "file": "__init__.py_9.md",
+      "x": 5760,
+      "y": 5640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g39",
+      "type": "group",
+      "label": "API Routes Package",
+      "x": 7360,
+      "y": 5560,
+      "width": 600,
+      "height": 400,
+      "color": "4"
+    },
+    {
+      "id": "n_api_routes_init_py",
+      "type": "file",
+      "file": "__init__.py_10.md",
+      "x": 7380,
+      "y": 5640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g40",
+      "type": "group",
+      "label": "Workers Package",
+      "x": 8980,
+      "y": 5560,
+      "width": 600,
+      "height": 400,
+      "color": "5"
+    },
+    {
+      "id": "n_workers_init_py",
+      "type": "file",
+      "file": "__init__.py_11.md",
+      "x": 9000,
+      "y": 5640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g41",
+      "type": "group",
+      "label": "Enrichment Package",
+      "x": 10380,
+      "y": 5560,
+      "width": 600,
+      "height": 400,
+      "color": "6"
+    },
+    {
+      "id": "n_enrichment_init_py",
+      "type": "file",
+      "file": "__init__.py_12.md",
+      "x": 10400,
+      "y": 5640,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g42",
+      "type": "group",
+      "label": "Monitoring Package",
+      "x": 0,
+      "y": 6040,
+      "width": 600,
+      "height": 400,
+      "color": "1"
+    },
+    {
+      "id": "n_monitoring_init_py",
+      "type": "file",
+      "file": "__init__.py_13.md",
+      "x": 20,
+      "y": 6120,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g43",
+      "type": "group",
+      "label": "Enumerations",
+      "x": 2060,
+      "y": 6040,
+      "width": 600,
+      "height": 400,
+      "color": "2"
+    },
+    {
+      "id": "n_models_enums",
+      "type": "file",
+      "file": "Enumerations (enums.py).md",
+      "x": 2080,
+      "y": 6120,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g44",
+      "type": "group",
+      "label": "Reaction Label Enum",
+      "x": 3900,
+      "y": 6040,
+      "width": 600,
+      "height": 400,
+      "color": "3"
+    },
+    {
+      "id": "n_enum_reaction_label",
+      "type": "file",
+      "file": "Enum ReactionLabel.md",
+      "x": 3920,
+      "y": 6120,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g45",
+      "type": "group",
+      "label": "Docker Test Profile",
+      "x": 5740,
+      "y": 6040,
+      "width": 600,
+      "height": 400,
+      "color": "4"
+    },
+    {
+      "id": "n_docker_compose_test",
+      "type": "file",
+      "file": "Docker Compose (Test Profile).md",
+      "x": 5760,
+      "y": 6120,
+      "width": 180,
+      "height": 60
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_scheduler_py_market_intel_scheduler_main",
+      "fromNode": "n_scheduler_py",
+      "toNode": "n_market_intel_scheduler_main",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_scheduler_py_market_intel_scheduler_rationale_1",
+      "fromNode": "n_scheduler_py",
+      "toNode": "n_market_intel_scheduler_rationale_1",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_main_py_market_intel_main_main",
+      "fromNode": "n_main_py",
+      "toNode": "n_market_intel_main_main",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_main_py_market_intel_main_rationale_1",
+      "fromNode": "n_main_py",
+      "toNode": "n_market_intel_main_rationale_1",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_deduplicator_py_config_log",
+      "fromNode": "n_ingestion_deduplicator_py",
+      "toNode": "n_config_log",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_deduplicator_py_config_settings",
+      "fromNode": "n_ingestion_deduplicator_py",
+      "toNode": "n_config_settings",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_deduplicator_py_models_schemas",
+      "fromNode": "n_ingestion_deduplicator_py",
+      "toNode": "n_models_schemas",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_deduplicator_py_storage_redis_client",
+      "fromNode": "n_ingestion_deduplicator_py",
+      "toNode": "n_storage_redis_client",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_deduplicator_py_ingestion_deduplicator_url_hash",
+      "fromNode": "n_ingestion_deduplicator_py",
+      "toNode": "n_ingestion_deduplicator_url_hash",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_deduplicator_py_ingestion_deduplicator_is_duplicate_url",
+      "fromNode": "n_ingestion_deduplicator_py",
+      "toNode": "n_ingestion_deduplicator_is_duplicate_url",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_deduplicator_py_ingestion_deduplicator_mark_url_seen",
+      "fromNode": "n_ingestion_deduplicator_py",
+      "toNode": "n_ingestion_deduplicator_mark_url_seen",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_deduplicator_py_ingestion_deduplicator_is_duplicate_content",
+      "fromNode": "n_ingestion_deduplicator_py",
+      "toNode": "n_ingestion_deduplicator_is_duplicate_content",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_deduplicator_py_ingestion_deduplicator_deduplicate_batch",
+      "fromNode": "n_ingestion_deduplicator_py",
+      "toNode": "n_ingestion_deduplicator_deduplicate_batch",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_deduplicator_py_ingestion_deduplicator_rationale_1",
+      "fromNode": "n_ingestion_deduplicator_py",
+      "toNode": "n_ingestion_deduplicator_rationale_1",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_deduplicator_url_hash_ingestion_deduplicator_is_duplicate_url",
+      "fromNode": "n_ingestion_deduplicator_url_hash",
+      "toNode": "n_ingestion_deduplicator_is_duplicate_url",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_deduplicator_url_hash_ingestion_deduplicator_mark_url_seen",
+      "fromNode": "n_ingestion_deduplicator_url_hash",
+      "toNode": "n_ingestion_deduplicator_mark_url_seen",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_deduplicator_is_duplicate_url_ingestion_deduplicator_deduplicate_batch",
+      "fromNode": "n_ingestion_deduplicator_is_duplicate_url",
+      "toNode": "n_ingestion_deduplicator_deduplicate_batch",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_deduplicator_is_duplicate_url_ingestion_deduplicator_rationale_28",
+      "fromNode": "n_ingestion_deduplicator_is_duplicate_url",
+      "toNode": "n_ingestion_deduplicator_rationale_28",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_deduplicator_is_duplicate_url_storage_redis_client_is_url_seen",
+      "fromNode": "n_ingestion_deduplicator_is_duplicate_url",
+      "toNode": "n_storage_redis_client_is_url_seen",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_deduplicator_mark_url_seen_ingestion_deduplicator_deduplicate_batch",
+      "fromNode": "n_ingestion_deduplicator_mark_url_seen",
+      "toNode": "n_ingestion_deduplicator_deduplicate_batch",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_deduplicator_mark_url_seen_storage_redis_client_set_url_seen",
+      "fromNode": "n_ingestion_deduplicator_mark_url_seen",
+      "toNode": "n_storage_redis_client_set_url_seen",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_deduplicator_is_duplicate_content_ingestion_deduplicator_deduplicate_batch",
+      "fromNode": "n_ingestion_deduplicator_is_duplicate_content",
+      "toNode": "n_ingestion_deduplicator_deduplicate_batch",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_deduplicator_is_duplicate_content_ingestion_deduplicator_rationale_41",
+      "fromNode": "n_ingestion_deduplicator_is_duplicate_content",
+      "toNode": "n_ingestion_deduplicator_rationale_41",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_deduplicator_is_duplicate_content_str",
+      "fromNode": "n_ingestion_deduplicator_is_duplicate_content",
+      "toNode": "n_str",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_deduplicator_deduplicate_batch_ingestion_deduplicator_rationale_107",
+      "fromNode": "n_ingestion_deduplicator_deduplicate_batch",
+      "toNode": "n_ingestion_deduplicator_rationale_107",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_deduplicator_deduplicate_batch_unit_test_duplicate_not_written_twice_test_duplicate_not_written_twice_url_dedup",
+      "fromNode": "n_ingestion_deduplicator_deduplicate_batch",
+      "toNode": "n_unit_test_duplicate_not_written_twice_test_duplicate_not_written_twice_url_dedup",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_deduplicator_deduplicate_batch_unit_test_duplicate_not_written_twice_test_duplicate_not_written_twice_semantic_dedup",
+      "fromNode": "n_ingestion_deduplicator_deduplicate_batch",
+      "toNode": "n_unit_test_duplicate_not_written_twice_test_duplicate_not_written_twice_semantic_dedup",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_deduplicator_deduplicate_batch_unit_test_duplicate_not_written_twice_test_unique_articles_all_pass_dedup",
+      "fromNode": "n_ingestion_deduplicator_deduplicate_batch",
+      "toNode": "n_unit_test_duplicate_not_written_twice_test_unique_articles_all_pass_dedup",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_deduplicator_deduplicate_batch_workers_ingestion_tasks_rss_ingestion_async",
+      "fromNode": "n_ingestion_deduplicator_deduplicate_batch",
+      "toNode": "n_workers_ingestion_tasks_rss_ingestion_async",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_deduplicator_deduplicate_batch_workers_ingestion_tasks_edgar_ingestion_async",
+      "fromNode": "n_ingestion_deduplicator_deduplicate_batch",
+      "toNode": "n_workers_ingestion_tasks_edgar_ingestion_async",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_deduplicator_deduplicate_batch_workers_ingestion_tasks_api_ingestion_async",
+      "fromNode": "n_ingestion_deduplicator_deduplicate_batch",
+      "toNode": "n_workers_ingestion_tasks_api_ingestion_async",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_macro_fetcher_py_config_log",
+      "fromNode": "n_ingestion_macro_fetcher_py",
+      "toNode": "n_config_log",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_macro_fetcher_py_config_settings",
+      "fromNode": "n_ingestion_macro_fetcher_py",
+      "toNode": "n_config_settings",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_macro_fetcher_py_config_sources",
+      "fromNode": "n_ingestion_macro_fetcher_py",
+      "toNode": "n_config_sources",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_macro_fetcher_py_models_schemas",
+      "fromNode": "n_ingestion_macro_fetcher_py",
+      "toNode": "n_models_schemas",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_macro_fetcher_py_ingestion_macro_fetcher_get_fred_client",
+      "fromNode": "n_ingestion_macro_fetcher_py",
+      "toNode": "n_ingestion_macro_fetcher_get_fred_client",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_macro_fetcher_py_ingestion_macro_fetcher_bootstrap_macro_series",
+      "fromNode": "n_ingestion_macro_fetcher_py",
+      "toNode": "n_ingestion_macro_fetcher_bootstrap_macro_series",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_macro_fetcher_py_ingestion_macro_fetcher_fetch_fred_series",
+      "fromNode": "n_ingestion_macro_fetcher_py",
+      "toNode": "n_ingestion_macro_fetcher_fetch_fred_series",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_macro_fetcher_py_ingestion_macro_fetcher_sync_macro_updates",
+      "fromNode": "n_ingestion_macro_fetcher_py",
+      "toNode": "n_ingestion_macro_fetcher_sync_macro_updates",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_macro_fetcher_py_ingestion_macro_fetcher_fetch_fred_series_since",
+      "fromNode": "n_ingestion_macro_fetcher_py",
+      "toNode": "n_ingestion_macro_fetcher_fetch_fred_series_since",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_macro_fetcher_py_ingestion_macro_fetcher_get_macro_snapshot",
+      "fromNode": "n_ingestion_macro_fetcher_py",
+      "toNode": "n_ingestion_macro_fetcher_get_macro_snapshot",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_macro_fetcher_py_ingestion_macro_fetcher_rationale_1",
+      "fromNode": "n_ingestion_macro_fetcher_py",
+      "toNode": "n_ingestion_macro_fetcher_rationale_1",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_macro_fetcher_get_fred_client_ingestion_macro_fetcher_fetch_fred_series",
+      "fromNode": "n_ingestion_macro_fetcher_get_fred_client",
+      "toNode": "n_ingestion_macro_fetcher_fetch_fred_series",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_macro_fetcher_get_fred_client_ingestion_macro_fetcher_fetch_fred_series_since",
+      "fromNode": "n_ingestion_macro_fetcher_get_fred_client",
+      "toNode": "n_ingestion_macro_fetcher_fetch_fred_series_since",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_macro_fetcher_bootstrap_macro_series_ingestion_macro_fetcher_rationale_22",
+      "fromNode": "n_ingestion_macro_fetcher_bootstrap_macro_series",
+      "toNode": "n_ingestion_macro_fetcher_rationale_22",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_macro_fetcher_bootstrap_macro_series_str",
+      "fromNode": "n_ingestion_macro_fetcher_bootstrap_macro_series",
+      "toNode": "n_str",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_macro_fetcher_bootstrap_macro_series_scripts_bootstrap_bootstrap",
+      "fromNode": "n_ingestion_macro_fetcher_bootstrap_macro_series",
+      "toNode": "n_scripts_bootstrap_bootstrap",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_macro_fetcher_fetch_fred_series_ingestion_macro_fetcher_rationale_70",
+      "fromNode": "n_ingestion_macro_fetcher_fetch_fred_series",
+      "toNode": "n_ingestion_macro_fetcher_rationale_70",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_macro_fetcher_sync_macro_updates_ingestion_macro_fetcher_rationale_76",
+      "fromNode": "n_ingestion_macro_fetcher_sync_macro_updates",
+      "toNode": "n_ingestion_macro_fetcher_rationale_76",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_macro_fetcher_sync_macro_updates_str",
+      "fromNode": "n_ingestion_macro_fetcher_sync_macro_updates",
+      "toNode": "n_str",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_macro_fetcher_sync_macro_updates_workers_enrichment_tasks_macro_sync_async",
+      "fromNode": "n_ingestion_macro_fetcher_sync_macro_updates",
+      "toNode": "n_workers_enrichment_tasks_macro_sync_async",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_macro_fetcher_fetch_fred_series_since_str",
+      "fromNode": "n_ingestion_macro_fetcher_fetch_fred_series_since",
+      "toNode": "n_str",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_macro_fetcher_get_macro_snapshot_ingestion_macro_fetcher_rationale_128",
+      "fromNode": "n_ingestion_macro_fetcher_get_macro_snapshot",
+      "toNode": "n_ingestion_macro_fetcher_rationale_128",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_macro_fetcher_get_macro_snapshot_models_schemas_macrosnapshot",
+      "fromNode": "n_ingestion_macro_fetcher_get_macro_snapshot",
+      "toNode": "n_models_schemas_macrosnapshot",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_macro_fetcher_get_macro_snapshot_intelligence_regime_classifier_run_regime_classification",
+      "fromNode": "n_ingestion_macro_fetcher_get_macro_snapshot",
+      "toNode": "n_intelligence_regime_classifier_run_regime_classification",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_macro_fetcher_get_macro_snapshot_intelligence_retriever_build_context_package",
+      "fromNode": "n_ingestion_macro_fetcher_get_macro_snapshot",
+      "toNode": "n_intelligence_retriever_build_context_package",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_py_config_log",
+      "fromNode": "n_ingestion_rss_fetcher_py",
+      "toNode": "n_config_log",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_py_config_settings",
+      "fromNode": "n_ingestion_rss_fetcher_py",
+      "toNode": "n_config_settings",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_py_config_sources",
+      "fromNode": "n_ingestion_rss_fetcher_py",
+      "toNode": "n_config_sources",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_py_config_watchlist",
+      "fromNode": "n_ingestion_rss_fetcher_py",
+      "toNode": "n_config_watchlist",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_py_ingestion_normalizer",
+      "fromNode": "n_ingestion_rss_fetcher_py",
+      "toNode": "n_ingestion_normalizer",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_py_models_schemas",
+      "fromNode": "n_ingestion_rss_fetcher_py",
+      "toNode": "n_models_schemas",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_py_ingestion_rss_fetcher_feedfetcherror",
+      "fromNode": "n_ingestion_rss_fetcher_py",
+      "toNode": "n_ingestion_rss_fetcher_feedfetcherror",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_py_ingestion_rss_fetcher_feedparseerror",
+      "fromNode": "n_ingestion_rss_fetcher_py",
+      "toNode": "n_ingestion_rss_fetcher_feedparseerror",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_py_ingestion_rss_fetcher_build_ticker_google_news_feeds",
+      "fromNode": "n_ingestion_rss_fetcher_py",
+      "toNode": "n_ingestion_rss_fetcher_build_ticker_google_news_feeds",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_py_ingestion_rss_fetcher_build_macro_google_news_feeds",
+      "fromNode": "n_ingestion_rss_fetcher_py",
+      "toNode": "n_ingestion_rss_fetcher_build_macro_google_news_feeds",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_py_ingestion_rss_fetcher_get_all_rss_feeds",
+      "fromNode": "n_ingestion_rss_fetcher_py",
+      "toNode": "n_ingestion_rss_fetcher_get_all_rss_feeds",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_py_ingestion_rss_fetcher_fetch_feed",
+      "fromNode": "n_ingestion_rss_fetcher_py",
+      "toNode": "n_ingestion_rss_fetcher_fetch_feed",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_py_ingestion_rss_fetcher_normalize_rss_item",
+      "fromNode": "n_ingestion_rss_fetcher_py",
+      "toNode": "n_ingestion_rss_fetcher_normalize_rss_item",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_py_ingestion_rss_fetcher_fetch_all_feeds",
+      "fromNode": "n_ingestion_rss_fetcher_py",
+      "toNode": "n_ingestion_rss_fetcher_fetch_all_feeds",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_py_ingestion_rss_fetcher_rationale_1",
+      "fromNode": "n_ingestion_rss_fetcher_py",
+      "toNode": "n_ingestion_rss_fetcher_rationale_1",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_feedfetcherror_exception",
+      "fromNode": "n_ingestion_rss_fetcher_feedfetcherror",
+      "toNode": "n_exception",
+      "label": "inherits [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_feedfetcherror_ingestion_rss_fetcher_fetch_feed",
+      "fromNode": "n_ingestion_rss_fetcher_feedfetcherror",
+      "toNode": "n_ingestion_rss_fetcher_fetch_feed",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_exception_ingestion_rss_fetcher_feedparseerror",
+      "fromNode": "n_exception",
+      "toNode": "n_ingestion_rss_fetcher_feedparseerror",
+      "label": "inherits [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_feedparseerror_ingestion_rss_fetcher_fetch_feed",
+      "fromNode": "n_ingestion_rss_fetcher_feedparseerror",
+      "toNode": "n_ingestion_rss_fetcher_fetch_feed",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_build_ticker_google_news_feeds_ingestion_rss_fetcher_get_all_rss_feeds",
+      "fromNode": "n_ingestion_rss_fetcher_build_ticker_google_news_feeds",
+      "toNode": "n_ingestion_rss_fetcher_get_all_rss_feeds",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_build_ticker_google_news_feeds_ingestion_rss_fetcher_rationale_35",
+      "fromNode": "n_ingestion_rss_fetcher_build_ticker_google_news_feeds",
+      "toNode": "n_ingestion_rss_fetcher_rationale_35",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_build_ticker_google_news_feeds_config_sources_build_google_news_url",
+      "fromNode": "n_ingestion_rss_fetcher_build_ticker_google_news_feeds",
+      "toNode": "n_config_sources_build_google_news_url",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_build_macro_google_news_feeds_ingestion_rss_fetcher_get_all_rss_feeds",
+      "fromNode": "n_ingestion_rss_fetcher_build_macro_google_news_feeds",
+      "toNode": "n_ingestion_rss_fetcher_get_all_rss_feeds",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_build_macro_google_news_feeds_config_sources_build_google_news_url",
+      "fromNode": "n_ingestion_rss_fetcher_build_macro_google_news_feeds",
+      "toNode": "n_config_sources_build_google_news_url",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_get_all_rss_feeds_ingestion_rss_fetcher_fetch_all_feeds",
+      "fromNode": "n_ingestion_rss_fetcher_get_all_rss_feeds",
+      "toNode": "n_ingestion_rss_fetcher_fetch_all_feeds",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_fetch_feed_ingestion_rss_fetcher_normalize_rss_item",
+      "fromNode": "n_ingestion_rss_fetcher_fetch_feed",
+      "toNode": "n_ingestion_rss_fetcher_normalize_rss_item",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_fetch_feed_ingestion_rss_fetcher_rationale_71",
+      "fromNode": "n_ingestion_rss_fetcher_fetch_feed",
+      "toNode": "n_ingestion_rss_fetcher_rationale_71",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_normalize_rss_item_ingestion_rss_fetcher_rationale_110",
+      "fromNode": "n_ingestion_rss_fetcher_normalize_rss_item",
+      "toNode": "n_ingestion_rss_fetcher_rationale_110",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_normalize_rss_item_ingestion_normalizer_normalize_article",
+      "fromNode": "n_ingestion_rss_fetcher_normalize_rss_item",
+      "toNode": "n_ingestion_normalizer_normalize_article",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_normalize_rss_item_str",
+      "fromNode": "n_ingestion_rss_fetcher_normalize_rss_item",
+      "toNode": "n_str",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_fetch_all_feeds_ingestion_rss_fetcher_rationale_151",
+      "fromNode": "n_ingestion_rss_fetcher_fetch_all_feeds",
+      "toNode": "n_ingestion_rss_fetcher_rationale_151",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_rss_fetcher_fetch_all_feeds_workers_ingestion_tasks_rss_ingestion_async",
+      "fromNode": "n_ingestion_rss_fetcher_fetch_all_feeds",
+      "toNode": "n_workers_ingestion_tasks_rss_ingestion_async",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_py_config_log",
+      "fromNode": "n_ingestion_price_fetcher_py",
+      "toNode": "n_config_log",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_py_config_settings",
+      "fromNode": "n_ingestion_price_fetcher_py",
+      "toNode": "n_config_settings",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_py_models_schemas",
+      "fromNode": "n_ingestion_price_fetcher_py",
+      "toNode": "n_models_schemas",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_py_ingestion_price_fetcher_bootstrap_price_history",
+      "fromNode": "n_ingestion_price_fetcher_py",
+      "toNode": "n_ingestion_price_fetcher_bootstrap_price_history",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_py_ingestion_price_fetcher_sync_daily_prices",
+      "fromNode": "n_ingestion_price_fetcher_py",
+      "toNode": "n_ingestion_price_fetcher_sync_daily_prices",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_py_ingestion_price_fetcher_fetch_yfinance",
+      "fromNode": "n_ingestion_price_fetcher_py",
+      "toNode": "n_ingestion_price_fetcher_fetch_yfinance",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_py_ingestion_price_fetcher_fetch_yfinance_sync",
+      "fromNode": "n_ingestion_price_fetcher_py",
+      "toNode": "n_ingestion_price_fetcher_fetch_yfinance_sync",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_py_ingestion_price_fetcher_upsert_prices",
+      "fromNode": "n_ingestion_price_fetcher_py",
+      "toNode": "n_ingestion_price_fetcher_upsert_prices",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_py_ingestion_price_fetcher_get_price_at",
+      "fromNode": "n_ingestion_price_fetcher_py",
+      "toNode": "n_ingestion_price_fetcher_get_price_at",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_py_ingestion_price_fetcher_compute_abnormal_return",
+      "fromNode": "n_ingestion_price_fetcher_py",
+      "toNode": "n_ingestion_price_fetcher_compute_abnormal_return",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_py_ingestion_price_fetcher_fetch_price_series",
+      "fromNode": "n_ingestion_price_fetcher_py",
+      "toNode": "n_ingestion_price_fetcher_fetch_price_series",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_py_ingestion_price_fetcher_label_reaction",
+      "fromNode": "n_ingestion_price_fetcher_py",
+      "toNode": "n_ingestion_price_fetcher_label_reaction",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_py_ingestion_price_fetcher_rationale_1",
+      "fromNode": "n_ingestion_price_fetcher_py",
+      "toNode": "n_ingestion_price_fetcher_rationale_1",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_bootstrap_price_history_ingestion_price_fetcher_fetch_yfinance",
+      "fromNode": "n_ingestion_price_fetcher_bootstrap_price_history",
+      "toNode": "n_ingestion_price_fetcher_fetch_yfinance",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_bootstrap_price_history_ingestion_price_fetcher_upsert_prices",
+      "fromNode": "n_ingestion_price_fetcher_bootstrap_price_history",
+      "toNode": "n_ingestion_price_fetcher_upsert_prices",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_bootstrap_price_history_ingestion_price_fetcher_rationale_30",
+      "fromNode": "n_ingestion_price_fetcher_bootstrap_price_history",
+      "toNode": "n_ingestion_price_fetcher_rationale_30",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_bootstrap_price_history_str",
+      "fromNode": "n_ingestion_price_fetcher_bootstrap_price_history",
+      "toNode": "n_str",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_bootstrap_price_history_scripts_bootstrap_bootstrap",
+      "fromNode": "n_ingestion_price_fetcher_bootstrap_price_history",
+      "toNode": "n_scripts_bootstrap_bootstrap",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_sync_daily_prices_ingestion_price_fetcher_fetch_yfinance",
+      "fromNode": "n_ingestion_price_fetcher_sync_daily_prices",
+      "toNode": "n_ingestion_price_fetcher_fetch_yfinance",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_sync_daily_prices_ingestion_price_fetcher_upsert_prices",
+      "fromNode": "n_ingestion_price_fetcher_sync_daily_prices",
+      "toNode": "n_ingestion_price_fetcher_upsert_prices",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_sync_daily_prices_ingestion_price_fetcher_rationale_55",
+      "fromNode": "n_ingestion_price_fetcher_sync_daily_prices",
+      "toNode": "n_ingestion_price_fetcher_rationale_55",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_sync_daily_prices_str",
+      "fromNode": "n_ingestion_price_fetcher_sync_daily_prices",
+      "toNode": "n_str",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_sync_daily_prices_workers_enrichment_tasks_price_sync_async",
+      "fromNode": "n_ingestion_price_fetcher_sync_daily_prices",
+      "toNode": "n_workers_enrichment_tasks_price_sync_async",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_upsert_prices_int",
+      "fromNode": "n_ingestion_price_fetcher_upsert_prices",
+      "toNode": "n_int",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_get_price_at_ingestion_price_fetcher_rationale_130",
+      "fromNode": "n_ingestion_price_fetcher_get_price_at",
+      "toNode": "n_ingestion_price_fetcher_rationale_130",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_get_price_at_intelligence_retriever_build_context_package",
+      "fromNode": "n_ingestion_price_fetcher_get_price_at",
+      "toNode": "n_intelligence_retriever_build_context_package",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_get_price_at_enrichment_price_reactor_compute_and_store_price_reactions",
+      "fromNode": "n_ingestion_price_fetcher_get_price_at",
+      "toNode": "n_enrichment_price_reactor_compute_and_store_price_reactions",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_compute_abnormal_return_ingestion_price_fetcher_fetch_price_series",
+      "fromNode": "n_ingestion_price_fetcher_compute_abnormal_return",
+      "toNode": "n_ingestion_price_fetcher_fetch_price_series",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_compute_abnormal_return_ingestion_price_fetcher_label_reaction",
+      "fromNode": "n_ingestion_price_fetcher_compute_abnormal_return",
+      "toNode": "n_ingestion_price_fetcher_label_reaction",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_compute_abnormal_return_ingestion_price_fetcher_rationale_158",
+      "fromNode": "n_ingestion_price_fetcher_compute_abnormal_return",
+      "toNode": "n_ingestion_price_fetcher_rationale_158",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_compute_abnormal_return_models_schemas_abnormalreturn",
+      "fromNode": "n_ingestion_price_fetcher_compute_abnormal_return",
+      "toNode": "n_models_schemas_abnormalreturn",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_price_fetcher_compute_abnormal_return_enrichment_price_reactor_compute_and_store_price_reactions",
+      "fromNode": "n_ingestion_price_fetcher_compute_abnormal_return",
+      "toNode": "n_enrichment_price_reactor_compute_and_store_price_reactions",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_edgar_fetcher_py_config_log",
+      "fromNode": "n_ingestion_edgar_fetcher_py",
+      "toNode": "n_config_log",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_edgar_fetcher_py_config_settings",
+      "fromNode": "n_ingestion_edgar_fetcher_py",
+      "toNode": "n_config_settings",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_edgar_fetcher_py_config_watchlist",
+      "fromNode": "n_ingestion_edgar_fetcher_py",
+      "toNode": "n_config_watchlist",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_edgar_fetcher_py_ingestion_normalizer",
+      "fromNode": "n_ingestion_edgar_fetcher_py",
+      "toNode": "n_ingestion_normalizer",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_edgar_fetcher_py_models_schemas",
+      "fromNode": "n_ingestion_edgar_fetcher_py",
+      "toNode": "n_models_schemas",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_edgar_fetcher_py_ingestion_edgar_fetcher_poll_edgar_rss",
+      "fromNode": "n_ingestion_edgar_fetcher_py",
+      "toNode": "n_ingestion_edgar_fetcher_poll_edgar_rss",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_edgar_fetcher_py_ingestion_edgar_fetcher_fetch_gdelt_events",
+      "fromNode": "n_ingestion_edgar_fetcher_py",
+      "toNode": "n_ingestion_edgar_fetcher_fetch_gdelt_events",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_edgar_fetcher_py_ingestion_edgar_fetcher_rationale_1",
+      "fromNode": "n_ingestion_edgar_fetcher_py",
+      "toNode": "n_ingestion_edgar_fetcher_rationale_1",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_edgar_fetcher_poll_edgar_rss_ingestion_edgar_fetcher_rationale_32",
+      "fromNode": "n_ingestion_edgar_fetcher_poll_edgar_rss",
+      "toNode": "n_ingestion_edgar_fetcher_rationale_32",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_edgar_fetcher_poll_edgar_rss_str",
+      "fromNode": "n_ingestion_edgar_fetcher_poll_edgar_rss",
+      "toNode": "n_str",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_edgar_fetcher_poll_edgar_rss_ingestion_normalizer_normalize_article",
+      "fromNode": "n_ingestion_edgar_fetcher_poll_edgar_rss",
+      "toNode": "n_ingestion_normalizer_normalize_article",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_edgar_fetcher_poll_edgar_rss_workers_ingestion_tasks_edgar_ingestion_async",
+      "fromNode": "n_ingestion_edgar_fetcher_poll_edgar_rss",
+      "toNode": "n_workers_ingestion_tasks_edgar_ingestion_async",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_edgar_fetcher_fetch_gdelt_events_ingestion_edgar_fetcher_rationale_94",
+      "fromNode": "n_ingestion_edgar_fetcher_fetch_gdelt_events",
+      "toNode": "n_ingestion_edgar_fetcher_rationale_94",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_edgar_fetcher_fetch_gdelt_events_str",
+      "fromNode": "n_ingestion_edgar_fetcher_fetch_gdelt_events",
+      "toNode": "n_str",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_edgar_fetcher_fetch_gdelt_events_scripts_bootstrap_bootstrap",
+      "fromNode": "n_ingestion_edgar_fetcher_fetch_gdelt_events",
+      "toNode": "n_scripts_bootstrap_bootstrap",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_py_models_schemas",
+      "fromNode": "n_ingestion_normalizer_py",
+      "toNode": "n_models_schemas",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_py_ingestion_normalizer_canonical_url",
+      "fromNode": "n_ingestion_normalizer_py",
+      "toNode": "n_ingestion_normalizer_canonical_url",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_py_ingestion_normalizer_article_id",
+      "fromNode": "n_ingestion_normalizer_py",
+      "toNode": "n_ingestion_normalizer_article_id",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_py_ingestion_normalizer_strip_html",
+      "fromNode": "n_ingestion_normalizer_py",
+      "toNode": "n_ingestion_normalizer_strip_html",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_py_ingestion_normalizer_parse_datetime",
+      "fromNode": "n_ingestion_normalizer_py",
+      "toNode": "n_ingestion_normalizer_parse_datetime",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_py_ingestion_normalizer_normalize_article",
+      "fromNode": "n_ingestion_normalizer_py",
+      "toNode": "n_ingestion_normalizer_normalize_article",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_py_ingestion_normalizer_rationale_1",
+      "fromNode": "n_ingestion_normalizer_py",
+      "toNode": "n_ingestion_normalizer_rationale_1",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_canonical_url_ingestion_normalizer_article_id",
+      "fromNode": "n_ingestion_normalizer_canonical_url",
+      "toNode": "n_ingestion_normalizer_article_id",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_canonical_url_ingestion_normalizer_normalize_article",
+      "fromNode": "n_ingestion_normalizer_canonical_url",
+      "toNode": "n_ingestion_normalizer_normalize_article",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_canonical_url_ingestion_normalizer_rationale_17",
+      "fromNode": "n_ingestion_normalizer_canonical_url",
+      "toNode": "n_ingestion_normalizer_rationale_17",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_canonical_url_unit_test_unit_misc_testnormalizer_test_canonical_url_strips_tracking_params",
+      "fromNode": "n_ingestion_normalizer_canonical_url",
+      "toNode": "n_unit_test_unit_misc_testnormalizer_test_canonical_url_strips_tracking_params",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_canonical_url_unit_test_unit_misc_testnormalizer_test_article_id_is_sha256",
+      "fromNode": "n_ingestion_normalizer_canonical_url",
+      "toNode": "n_unit_test_unit_misc_testnormalizer_test_article_id_is_sha256",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_article_id_ingestion_normalizer_normalize_article",
+      "fromNode": "n_ingestion_normalizer_article_id",
+      "toNode": "n_ingestion_normalizer_normalize_article",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_article_id_ingestion_normalizer_rationale_30",
+      "fromNode": "n_ingestion_normalizer_article_id",
+      "toNode": "n_ingestion_normalizer_rationale_30",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_article_id_unit_test_duplicate_not_written_twice_make_article",
+      "fromNode": "n_ingestion_normalizer_article_id",
+      "toNode": "n_unit_test_duplicate_not_written_twice_make_article",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_article_id_unit_test_unit_misc_testnormalizer_test_article_id_is_sha256",
+      "fromNode": "n_ingestion_normalizer_article_id",
+      "toNode": "n_unit_test_unit_misc_testnormalizer_test_article_id_is_sha256",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_strip_html_ingestion_normalizer_normalize_article",
+      "fromNode": "n_ingestion_normalizer_strip_html",
+      "toNode": "n_ingestion_normalizer_normalize_article",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_parse_datetime_ingestion_normalizer_normalize_article",
+      "fromNode": "n_ingestion_normalizer_parse_datetime",
+      "toNode": "n_ingestion_normalizer_normalize_article",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_parse_datetime_ingestion_normalizer_rationale_47",
+      "fromNode": "n_ingestion_normalizer_parse_datetime",
+      "toNode": "n_ingestion_normalizer_rationale_47",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_normalize_article_ingestion_normalizer_rationale_86",
+      "fromNode": "n_ingestion_normalizer_normalize_article",
+      "toNode": "n_ingestion_normalizer_rationale_86",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_normalize_article_models_schemas_rawarticle",
+      "fromNode": "n_ingestion_normalizer_normalize_article",
+      "toNode": "n_models_schemas_rawarticle",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_normalize_article_ingestion_api_fetcher_fetch_finnhub_news",
+      "fromNode": "n_ingestion_normalizer_normalize_article",
+      "toNode": "n_ingestion_api_fetcher_fetch_finnhub_news",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_normalize_article_ingestion_api_fetcher_fetch_marketaux_news",
+      "fromNode": "n_ingestion_normalizer_normalize_article",
+      "toNode": "n_ingestion_api_fetcher_fetch_marketaux_news",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_normalize_article_ingestion_api_fetcher_fetch_alpha_vantage_news",
+      "fromNode": "n_ingestion_normalizer_normalize_article",
+      "toNode": "n_ingestion_api_fetcher_fetch_alpha_vantage_news",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_normalize_article_unit_test_published_at_never_null_test_published_at_never_null_rejects_if_missing",
+      "fromNode": "n_ingestion_normalizer_normalize_article",
+      "toNode": "n_unit_test_published_at_never_null_test_published_at_never_null_rejects_if_missing",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_normalize_article_unit_test_published_at_never_null_test_published_at_never_null_accepts_valid_date",
+      "fromNode": "n_ingestion_normalizer_normalize_article",
+      "toNode": "n_unit_test_published_at_never_null_test_published_at_never_null_accepts_valid_date",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_normalize_article_unit_test_published_at_never_null_test_published_at_never_null_uses_datetime_directly",
+      "fromNode": "n_ingestion_normalizer_normalize_article",
+      "toNode": "n_unit_test_published_at_never_null_test_published_at_never_null_uses_datetime_directly",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_normalize_article_unit_test_published_at_never_null_test_published_at_never_null_rejects_missing_title",
+      "fromNode": "n_ingestion_normalizer_normalize_article",
+      "toNode": "n_unit_test_published_at_never_null_test_published_at_never_null_rejects_missing_title",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_normalize_article_unit_test_published_at_never_null_test_published_at_never_null_rejects_missing_url",
+      "fromNode": "n_ingestion_normalizer_normalize_article",
+      "toNode": "n_unit_test_published_at_never_null_test_published_at_never_null_rejects_missing_url",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_normalize_article_unit_test_published_at_never_null_test_published_at_always_utc",
+      "fromNode": "n_ingestion_normalizer_normalize_article",
+      "toNode": "n_unit_test_published_at_never_null_test_published_at_always_utc",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_normalizer_normalize_article_unit_test_unit_misc_testnormalizer_test_html_stripped_from_summary",
+      "fromNode": "n_ingestion_normalizer_normalize_article",
+      "toNode": "n_unit_test_unit_misc_testnormalizer_test_html_stripped_from_summary",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_api_fetcher_py_config_log",
+      "fromNode": "n_ingestion_api_fetcher_py",
+      "toNode": "n_config_log",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_api_fetcher_py_config_settings",
+      "fromNode": "n_ingestion_api_fetcher_py",
+      "toNode": "n_config_settings",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_api_fetcher_py_config_watchlist",
+      "fromNode": "n_ingestion_api_fetcher_py",
+      "toNode": "n_config_watchlist",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_api_fetcher_py_ingestion_normalizer",
+      "fromNode": "n_ingestion_api_fetcher_py",
+      "toNode": "n_ingestion_normalizer",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_api_fetcher_py_models_schemas",
+      "fromNode": "n_ingestion_api_fetcher_py",
+      "toNode": "n_models_schemas",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_api_fetcher_py_storage_redis_client",
+      "fromNode": "n_ingestion_api_fetcher_py",
+      "toNode": "n_storage_redis_client",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_api_fetcher_py_ingestion_api_fetcher_fetch_finnhub_news",
+      "fromNode": "n_ingestion_api_fetcher_py",
+      "toNode": "n_ingestion_api_fetcher_fetch_finnhub_news",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_api_fetcher_py_ingestion_api_fetcher_fetch_marketaux_news",
+      "fromNode": "n_ingestion_api_fetcher_py",
+      "toNode": "n_ingestion_api_fetcher_fetch_marketaux_news",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_api_fetcher_py_ingestion_api_fetcher_fetch_alpha_vantage_news",
+      "fromNode": "n_ingestion_api_fetcher_py",
+      "toNode": "n_ingestion_api_fetcher_fetch_alpha_vantage_news",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_api_fetcher_py_ingestion_api_fetcher_rationale_1",
+      "fromNode": "n_ingestion_api_fetcher_py",
+      "toNode": "n_ingestion_api_fetcher_rationale_1",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_api_fetcher_fetch_finnhub_news_ingestion_api_fetcher_rationale_27",
+      "fromNode": "n_ingestion_api_fetcher_fetch_finnhub_news",
+      "toNode": "n_ingestion_api_fetcher_rationale_27",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_api_fetcher_fetch_finnhub_news_storage_redis_client_check_rate_limit",
+      "fromNode": "n_ingestion_api_fetcher_fetch_finnhub_news",
+      "toNode": "n_storage_redis_client_check_rate_limit",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_api_fetcher_fetch_finnhub_news_str",
+      "fromNode": "n_ingestion_api_fetcher_fetch_finnhub_news",
+      "toNode": "n_str",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_api_fetcher_fetch_finnhub_news_workers_ingestion_tasks_api_ingestion_async",
+      "fromNode": "n_ingestion_api_fetcher_fetch_finnhub_news",
+      "toNode": "n_workers_ingestion_tasks_api_ingestion_async",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_api_fetcher_fetch_marketaux_news_ingestion_api_fetcher_rationale_85",
+      "fromNode": "n_ingestion_api_fetcher_fetch_marketaux_news",
+      "toNode": "n_ingestion_api_fetcher_rationale_85",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_api_fetcher_fetch_marketaux_news_storage_redis_client_get_rate_limit_count",
+      "fromNode": "n_ingestion_api_fetcher_fetch_marketaux_news",
+      "toNode": "n_storage_redis_client_get_rate_limit_count",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_api_fetcher_fetch_marketaux_news_storage_redis_client_check_rate_limit",
+      "fromNode": "n_ingestion_api_fetcher_fetch_marketaux_news",
+      "toNode": "n_storage_redis_client_check_rate_limit",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_api_fetcher_fetch_marketaux_news_str",
+      "fromNode": "n_ingestion_api_fetcher_fetch_marketaux_news",
+      "toNode": "n_str",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_api_fetcher_fetch_marketaux_news_workers_ingestion_tasks_api_ingestion_async",
+      "fromNode": "n_ingestion_api_fetcher_fetch_marketaux_news",
+      "toNode": "n_workers_ingestion_tasks_api_ingestion_async",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_api_fetcher_fetch_alpha_vantage_news_ingestion_api_fetcher_rationale_155",
+      "fromNode": "n_ingestion_api_fetcher_fetch_alpha_vantage_news",
+      "toNode": "n_ingestion_api_fetcher_rationale_155",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_ingestion_api_fetcher_fetch_alpha_vantage_news_storage_redis_client_check_rate_limit",
+      "fromNode": "n_ingestion_api_fetcher_fetch_alpha_vantage_news",
+      "toNode": "n_storage_redis_client_check_rate_limit",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_api_fetcher_fetch_alpha_vantage_news_str",
+      "fromNode": "n_ingestion_api_fetcher_fetch_alpha_vantage_news",
+      "toNode": "n_str",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_ingestion_api_fetcher_fetch_alpha_vantage_news_workers_ingestion_tasks_api_ingestion_async",
+      "fromNode": "n_ingestion_api_fetcher_fetch_alpha_vantage_news",
+      "toNode": "n_workers_ingestion_tasks_api_ingestion_async",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_intelligence_regime_classifier_py_config_log",
+      "fromNode": "n_intelligence_regime_classifier_py",
+      "toNode": "n_config_log",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_intelligence_regime_classifier_py_models_schemas",
+      "fromNode": "n_intelligence_regime_classifier_py",
+      "toNode": "n_models_schemas",
+      "label": "imports_from [EXTRACTED]"
+    },
+    {
+      "id": "e_intelligence_regime_classifier_py_intelligence_regime_classifier_classify_regime",
+      "fromNode": "n_intelligence_regime_classifier_py",
+      "toNode": "n_intelligence_regime_classifier_classify_regime",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_intelligence_regime_classifier_py_intelligence_regime_classifier_classify_volatility",
+      "fromNode": "n_intelligence_regime_classifier_py",
+      "toNode": "n_intelligence_regime_classifier_classify_volatility",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_intelligence_regime_classifier_py_intelligence_regime_classifier_classify_liquidity",
+      "fromNode": "n_intelligence_regime_classifier_py",
+      "toNode": "n_intelligence_regime_classifier_classify_liquidity",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_intelligence_regime_classifier_py_intelligence_regime_classifier_classify_macro",
+      "fromNode": "n_intelligence_regime_classifier_py",
+      "toNode": "n_intelligence_regime_classifier_classify_macro",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_intelligence_regime_classifier_py_intelligence_regime_classifier_classify_sentiment",
+      "fromNode": "n_intelligence_regime_classifier_py",
+      "toNode": "n_intelligence_regime_classifier_classify_sentiment",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_intelligence_regime_classifier_py_intelligence_regime_classifier_compute_confidence",
+      "fromNode": "n_intelligence_regime_classifier_py",
+      "toNode": "n_intelligence_regime_classifier_compute_confidence",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_intelligence_regime_classifier_py_intelligence_regime_classifier_get_latest_regime",
+      "fromNode": "n_intelligence_regime_classifier_py",
+      "toNode": "n_intelligence_regime_classifier_get_latest_regime",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_intelligence_regime_classifier_py_intelligence_regime_classifier_run_regime_classification",
+      "fromNode": "n_intelligence_regime_classifier_py",
+      "toNode": "n_intelligence_regime_classifier_run_regime_classification",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_intelligence_regime_classifier_py_intelligence_regime_classifier_rationale_1",
+      "fromNode": "n_intelligence_regime_classifier_py",
+      "toNode": "n_intelligence_regime_classifier_rationale_1",
+      "label": "rationale_for [EXTRACTED]"
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+{
+  "/Users/sriharshavardhanprattipati/mios/market-intel/scheduler.py": {
+    "mtime": 1779117305.7602482,
+    "hash": "ba3ac8e5e2a32977537598ee09ceab04"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/main.py": {
+    "mtime": 1779117296.204742,
+    "hash": "059bea3a22e9b8ac7e5bff811f6f0e1b"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/ingestion/deduplicator.py": {
+    "mtime": 1779121436.625428,
+    "hash": "7bfabb993d97b61c855cdf9d84bf2ea4"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/ingestion/macro_fetcher.py": {
+    "mtime": 1779120776.3387496,
+    "hash": "bca22ae43eb565eb38591552144aad7d"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/ingestion/rss_fetcher.py": {
+    "mtime": 1779121315.898505,
+    "hash": "c43a4e9b96af2ca0fa05b6b93e0d7024"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/ingestion/__init__.py": {
+    "mtime": 1779117252.4761636,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/ingestion/price_fetcher.py": {
+    "mtime": 1779121309.6468747,
+    "hash": "e3afbfcbff2d6e2e67aa50979b3eb36a"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/ingestion/edgar_fetcher.py": {
+    "mtime": 1779120776.3411512,
+    "hash": "553973fe45967daebb8c090f648c7ac1"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/ingestion/normalizer.py": {
+    "mtime": 1779119967.7437959,
+    "hash": "dc788aa593368888432a00ca6f669e38"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/ingestion/api_fetcher.py": {
+    "mtime": 1779120776.341905,
+    "hash": "b3d1538354890ba3a249a5f114d01735"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/intelligence/regime_classifier.py": {
+    "mtime": 1779120776.3426526,
+    "hash": "db082d0f534fe04b6f0b0052cf53acde"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/intelligence/signal_scorer.py": {
+    "mtime": 1779117954.5281715,
+    "hash": "3b600bc6f6d0afe5fdbf9b149ec75b7a"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/intelligence/retriever.py": {
+    "mtime": 1779120776.3433728,
+    "hash": "483e7510480b7bfdb9d4de1b54ead069"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/intelligence/__init__.py": {
+    "mtime": 1779117252.476326,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/intelligence/prompts.py": {
+    "mtime": 1779117930.9301052,
+    "hash": "331413fb8b40b0d1a1bf162b3b6792ac"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/intelligence/engine.py": {
+    "mtime": 1779121262.7386825,
+    "hash": "507288226f7a055973a91470d9dd9bb3"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/intelligence/contradiction_detector.py": {
+    "mtime": 1779118010.9744189,
+    "hash": "86e83a19beda8470124b140119f92106"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/config/log.py": {
+    "mtime": 1779119979.6408954,
+    "hash": "09d6eb69809e5e4703c5f6ebd8c3eaf1"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/config/__init__.py": {
+    "mtime": 1779117252.4758785,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/config/watchlist.py": {
+    "mtime": 1779117401.55873,
+    "hash": "f06eff0d713ac6b462f2dd5a54d9cb5a"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/config/sources.py": {
+    "mtime": 1779117376.0745194,
+    "hash": "1d082d29250f1135594c1f605cb216c6"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/config/settings.py": {
+    "mtime": 1779121210.2954965,
+    "hash": "723b59c6129201a86fafe5aa94af5711"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/tests/conftest.py": {
+    "mtime": 1779121329.4912486,
+    "hash": "dbdc819b585b088bc9636b83eaecafd5"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/tests/__init__.py": {
+    "mtime": 1779117252.4769952,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/tests/unit/test_duplicate_not_written_twice.py": {
+    "mtime": 1779121179.1114736,
+    "hash": "a11054801eab1fc050c0138831492571"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/tests/unit/__init__.py": {
+    "mtime": 1779117252.477086,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/tests/unit/test_rate_limit_respected.py": {
+    "mtime": 1779121412.9343867,
+    "hash": "c98480e66f23b5ffa001a97fcc6403a3"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/tests/unit/test_intelligence_cites_source_ids.py": {
+    "mtime": 1779121179.1121445,
+    "hash": "77377d00e3eb5d3d9af28cbdd2fbd69b"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/tests/unit/test_published_at_never_null.py": {
+    "mtime": 1779118639.9132218,
+    "hash": "37bb2fe4f14dc5ac593ab8089f128cb7"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/tests/unit/test_low_significance_skips_generation.py": {
+    "mtime": 1779121179.1138391,
+    "hash": "92e885c3b4d9f3be9ff96ef34d7245b7"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/tests/unit/test_unit_misc.py": {
+    "mtime": 1779118771.3894272,
+    "hash": "807c61f6fce94360b4a20104f51d0464"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/tests/unit/test_no_hallucination_beyond_context.py": {
+    "mtime": 1779121179.1127052,
+    "hash": "b5cb3914da1e15601bf4ddf7348e85d1"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/tests/integration/__init__.py": {
+    "mtime": 1779117252.4772043,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/models/db.py": {
+    "mtime": 1779117464.2049873,
+    "hash": "2775d2a8f0ab74e62cef88cd41d6d7f9"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/models/enums.py": {
+    "mtime": 1779117432.794921,
+    "hash": "d2c9434d36a27a640d5e663c131e02cc"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/models/__init__.py": {
+    "mtime": 1779117252.4760623,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/models/schemas.py": {
+    "mtime": 1779120798.6274264,
+    "hash": "f3129d4e4e383b77118a4f3fd9ea66c7"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/storage/database.py": {
+    "mtime": 1779117513.827781,
+    "hash": "ef6979c6c0d6fae94afb36c62971679d"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/storage/__init__.py": {
+    "mtime": 1779117252.4767992,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/storage/redis_client.py": {
+    "mtime": 1779117534.2303598,
+    "hash": "6750312a5c2db3cfa098d79640c2fa49"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/storage/migrations/env.py": {
+    "mtime": 1779117546.1247914,
+    "hash": "e5189400e83097885c03777e9408065b"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/storage/migrations/versions/0001_initial_schema.py": {
+    "mtime": 1779117583.6625755,
+    "hash": "a95389ac26524b355832789c630a899d"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/scripts/bootstrap.py": {
+    "mtime": 1779118451.1076148,
+    "hash": "69593db6fd522e37013f7256d7157a34"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/scripts/validate_sources.py": {
+    "mtime": 1779118482.1043637,
+    "hash": "9c2b1b1d5cba667d35f3bda0267394c8"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/scripts/backfill_embeddings.py": {
+    "mtime": 1779118464.18804,
+    "hash": "d238b94d19839cd4971ef04d45f8a8f3"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/delivery/telegram_bot.py": {
+    "mtime": 1779120776.3448172,
+    "hash": "c96b82e56abb1408ef379c52dc1d85c8"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/delivery/__init__.py": {
+    "mtime": 1779117252.4764106,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/api/__init__.py": {
+    "mtime": 1779117252.4764936,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/api/main.py": {
+    "mtime": 1779118273.1436481,
+    "hash": "991efd20183d5e9f674e4b7a924b9eb6"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/api/dependencies.py": {
+    "mtime": 1779118283.3140795,
+    "hash": "21174d11bc68a6e8661c63bbfa54f070"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/api/routes/health.py": {
+    "mtime": 1779118300.84062,
+    "hash": "dfa0b0e122370fc1901ea6c71011f27c"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/api/routes/__init__.py": {
+    "mtime": 1779117252.476573,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/api/routes/intelligence.py": {
+    "mtime": 1779118315.693864,
+    "hash": "80610556de22d2c7fb6d8cfa06a3316b"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/api/routes/sources.py": {
+    "mtime": 1779118342.0137453,
+    "hash": "56438ba46f5da07c3d29a0dca53b8682"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/api/routes/articles.py": {
+    "mtime": 1779118329.8993585,
+    "hash": "109468b47474a24131076497e7701749"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/workers/celery_app.py": {
+    "mtime": 1779118165.9894392,
+    "hash": "9178a92374ba2b2ef10947860099375a"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/workers/__init__.py": {
+    "mtime": 1779117252.4766612,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/workers/ingestion_tasks.py": {
+    "mtime": 1779120776.3463364,
+    "hash": "f6153e09a8e46bdbb1d4e766e2a06916"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/workers/enrichment_tasks.py": {
+    "mtime": 1779120776.3469796,
+    "hash": "7d0e6156b9e2efb8cbdc515c3ad86c06"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/workers/intelligence_tasks.py": {
+    "mtime": 1779120776.3454976,
+    "hash": "307485aa96defd0751c1222af2ba3311"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/enrichment/ticker_extractor.py": {
+    "mtime": 1779120776.3484175,
+    "hash": "7a469ec3c23009ab1f8cd7b73dd5aa1b"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/enrichment/__init__.py": {
+    "mtime": 1779117252.476241,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/enrichment/price_reactor.py": {
+    "mtime": 1779120776.3492985,
+    "hash": "6e7de8778549369fb9c7a424c48bff86"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/enrichment/embedder.py": {
+    "mtime": 1779121282.1747367,
+    "hash": "40827e5c7a26e543762e0c1678d6ca68"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/monitoring/metrics.py": {
+    "mtime": 1779118381.8537455,
+    "hash": "27ff6981e1d9feb4640140b64b9d93de"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/monitoring/__init__.py": {
+    "mtime": 1779117252.476898,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/monitoring/health_checker.py": {
+    "mtime": 1779120776.350307,
+    "hash": "62e6ff951ac4b28439663e150b046d0f"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/requirements.txt": {
+    "mtime": 1779117270.0346992,
+    "hash": "db2c36bb3a2e5698b0cae63f0a531e41"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/docker/docker-compose.yml": {
+    "mtime": 1779118528.736912,
+    "hash": "73738e1707005d23e3c54278c879cf71"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/docker/docker-compose.test.yml": {
+    "mtime": 1779118540.0435488,
+    "hash": "e255f45093109cdfe7510de0906a8e32"
+  },
+  "/Users/sriharshavardhanprattipati/mios/market-intel/docker/prometheus.yml": {
+    "mtime": 1779118548.5051866,
+    "hash": "4aa2876a9e40871aaa979254a244695a"
+  }
+}
