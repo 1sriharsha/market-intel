@@ -21,9 +21,9 @@ feedparser==6.0.11
 
 # Data / finance
 yfinance==0.2.43
-pandas==2.2.3
-numpy==2.1.1
-scipy==1.14.1
+pandas==2.2.2
+numpy==1.26.4
+scipy==1.13.1
 
 # NLP
 spacy==3.7.6

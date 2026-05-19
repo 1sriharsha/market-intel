@@ -8,8 +8,15 @@ from sqlalchemy import (
     Integer, Numeric, SmallInteger, String, Text, ARRAY,
     func, text,
 )
-from sqlalchemy.dialects.postgresql import UUID, TIMESTAMPTZ
+
+from sqlalchemy import DateTime
+from sqlalchemy.dialects.postgresql import UUID
+
+TIMESTAMPTZ = DateTime(timezone=True)
+
 from sqlalchemy.orm import DeclarativeBase, relationship
+
+
 
 
 class Base(DeclarativeBase):

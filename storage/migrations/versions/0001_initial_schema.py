@@ -1,7 +1,11 @@
 """Initial schema — all 9 canonical tables + pgvector + TimescaleDB extensions."""
 from alembic import op
 import sqlalchemy as sa
-from sqlalchemy.dialects.postgresql import UUID, TIMESTAMPTZ
+
+from sqlalchemy import DateTime
+from sqlalchemy.dialects.postgresql import UUID
+
+TIMESTAMPTZ = DateTime(timezone=True)
 
 revision = "0001_initial_schema"
 down_revision = None
