@@ -1,13 +1,18 @@
 """FastAPI application entry point."""
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 import structlog
 from fastapi import FastAPI
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 from prometheus_client import make_asgi_app
 
 from api.routes import health, intelligence, articles, sources
 
 log = structlog.get_logger()
+
+STATIC_DIR = Path(__file__).parent / "static"
 
 
 @asynccontextmanager
@@ -37,3 +42,11 @@ app.include_router(health.router, tags=["health"])
 app.include_router(intelligence.router, prefix="/intelligence", tags=["intelligence"])
 app.include_router(articles.router, prefix="/articles", tags=["articles"])
 app.include_router(sources.router, prefix="/sources", tags=["sources"])
+
+# Serve frontend dashboard
+app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
+
+
+@app.get("/", include_in_schema=False)
+async def dashboard():
+    return FileResponse(STATIC_DIR / "index.html")

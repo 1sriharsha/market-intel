@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MIOS — Market Intelligence</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    [x-cloak] { display: none !important; }
+    body { background: #060b18; font-family: 'Inter', system-ui, sans-serif; }
+    ::-webkit-scrollbar { width: 4px; height: 4px; }
+    ::-webkit-scrollbar-track { background: #0d1424; }
+    ::-webkit-scrollbar-thumb { background: #1e3a5f; border-radius: 2px; }
+    .card { background: #0d1424; border: 1px solid #1a2744; }
+    .sidebar-item { transition: all 0.15s; }
+    .sidebar-item:hover { background: #111d35; }
+    .sidebar-item.active { background: #0f2348; border-left: 2px solid #3b82f6; }
+    .badge-critical { background: #450a0a; color: #f87171; border: 1px solid #7f1d1d; }
+    .badge-high { background: #431407; color: #fb923c; border: 1px solid #7c2d12; }
+    .badge-medium { background: #422006; color: #fbbf24; border: 1px solid #78350f; }
+    .badge-low { background: #1a1a2e; color: #6b7280; border: 1px solid #374151; }
+    .tier-1 { background: #052e16; color: #4ade80; border: 1px solid #14532d; }
+    .tier-2 { background: #172554; color: #60a5fa; border: 1px solid #1e3a8a; }
+    .tier-3 { background: #1e1b4b; color: #a78bfa; border: 1px solid #312e81; }
+    .tier-4 { background: #1a1a2e; color: #6b7280; border: 1px solid #374151; }
+    .pulse-green { animation: pulse-green 2s infinite; }
+    @keyframes pulse-green { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+    .score-bar { transition: width 0.6s ease; }
+    .fade-in { animation: fadeIn 0.3s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .shimmer { background: linear-gradient(90deg, #0d1424 25%, #111d35 50%, #0d1424 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; }
+    @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+    table { border-collapse: collapse; }
+    th { font-size: 0.7rem; letter-spacing: 0.08em; }
+  </style>
+</head>
+<body class="text-gray-100 min-h-screen" x-data="app()" x-cloak>
+
+  <!-- Top Bar -->
+  <div class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-3" style="background:#060b18; border-bottom: 1px solid #1a2744;">
+    <div class="flex items-center gap-3">
+      <div class="flex items-center gap-2">
+        <div class="w-6 h-6 rounded flex items-center justify-center" style="background: linear-gradient(135deg, #1d4ed8, #0ea5e9);">
+          <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+        </div>
+        <span class="font-semibold text-white tracking-tight text-sm">MIOS</span>
+        <span class="text-gray-600 text-xs font-light ml-1">Market Intelligence</span>
+      </div>
+    </div>
+    <div class="flex items-center gap-4">
+      <!-- System Status -->
+      <div class="flex items-center gap-2 px-3 py-1.5 rounded-full" style="background:#0d1424; border: 1px solid #1a2744;">
+        <div class="w-1.5 h-1.5 rounded-full pulse-green" :class="systemOnline ? 'bg-green-400' : 'bg-red-400'"></div>
+        <span class="text-xs" :class="systemOnline ? 'text-green-400' : 'text-red-400'" x-text="systemOnline ? 'System Online' : 'System Offline'"></span>
+      </div>
+      <!-- Trigger Button -->
+      <button @click="triggerCycle()" :disabled="triggering"
+        class="flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-medium transition-all"
+        :class="triggering ? 'bg-blue-900 text-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-500 text-white'">
+        <svg class="w-3 h-3" :class="triggering ? 'animate-spin' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+        <span x-text="triggering ? 'Running...' : 'Run Cycle'"></span>
+      </button>
+      <!-- Refresh -->
+      <button @click="refreshAll()" class="text-gray-500 hover:text-gray-300 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+      </button>
+      <span class="text-gray-600 text-xs" x-text="lastUpdated"></span>
+    </div>
+  </div>
+
+  <div class="flex pt-12">
+    <!-- Sidebar -->
+    <div class="fixed left-0 top-12 bottom-0 w-52 flex flex-col py-4" style="background:#060b18; border-right: 1px solid #1a2744;">
+      <nav class="flex flex-col gap-0.5 px-2">
+        <template x-for="item in navItems" :key="item.id">
+          <button @click="currentView = item.id"
+            class="sidebar-item flex items-center gap-3 px-3 py-2.5 rounded text-sm text-left w-full"
+            :class="currentView === item.id ? 'active text-blue-400' : 'text-gray-400'">
+            <span x-html="item.icon" class="w-4 h-4 flex-shrink-0"></span>
+            <span x-text="item.label"></span>
+            <span x-show="item.id === 'intelligence' && status.intelligence_objects_today > 0"
+              class="ml-auto text-xs px-1.5 py-0.5 rounded-full bg-blue-900 text-blue-300"
+              x-text="status.intelligence_objects_today"></span>
+          </button>
+        </template>
+      </nav>
+
+      <!-- Bottom stats -->
+      <div class="mt-auto px-3 py-3 mx-2 rounded" style="background:#0d1424; border: 1px solid #1a2744;">
+        <div class="text-xs text-gray-500 mb-2 font-medium uppercase tracking-wider">Today</div>
+        <div class="space-y-1.5">
+          <div class="flex justify-between text-xs">
+            <span class="text-gray-500">Articles</span>
+            <span class="text-gray-200 font-medium" x-text="status.articles_last_24h ?? '—'"></span>
+          </div>
+          <div class="flex justify-between text-xs">
+            <span class="text-gray-500">Intelligence</span>
+            <span class="text-gray-200 font-medium" x-text="status.intelligence_objects_today ?? '—'"></span>
+          </div>
+          <div class="flex justify-between text-xs">
+            <span class="text-gray-500">Alerts sent</span>
+            <span class="font-medium" :class="(status.alerts_sent_today ?? 0) >= 5 ? 'text-red-400' : 'text-gray-200'" x-text="(status.alerts_sent_today ?? '—') + (status.alerts_sent_today !== undefined ? '/5' : '')"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="ml-52 flex-1 min-h-screen p-6">
+
+      <!-- OVERVIEW -->
+      <div x-show="currentView === 'overview'" class="fade-in space-y-6">
+        <div>
+          <h1 class="text-lg font-semibold text-white">Overview</h1>
+          <p class="text-gray-500 text-sm mt-0.5">System health and activity summary</p>
+        </div>
+
+        <!-- Metric Cards -->
+        <div class="grid grid-cols-4 gap-4">
+          <div class="card rounded-lg p-4">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-gray-500 text-xs uppercase tracking-wider font-medium">Articles (24h)</span>
+              <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 12h6"/></svg>
+            </div>
+            <div class="text-2xl font-bold text-white" x-text="status.articles_last_24h ?? '—'"></div>
+            <div class="text-xs text-gray-600 mt-1">ingested from 100+ feeds</div>
+          </div>
+          <div class="card rounded-lg p-4">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-gray-500 text-xs uppercase tracking-wider font-medium">Intelligence</span>
+              <svg class="w-4 h-4 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+            </div>
+            <div class="text-2xl font-bold text-white" x-text="status.intelligence_objects_today ?? '—'"></div>
+            <div class="text-xs text-gray-600 mt-1">Claude analyses today</div>
+          </div>
+          <div class="card rounded-lg p-4">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-gray-500 text-xs uppercase tracking-wider font-medium">Feed Health</span>
+              <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div class="text-2xl font-bold text-white">
+              <span x-text="status.feeds_healthy ?? '—'"></span><span class="text-gray-600 text-lg font-normal" x-text="status.feeds_total ? '/' + status.feeds_total : ''"></span>
+            </div>
+            <div class="text-xs text-gray-600 mt-1">sources reporting</div>
+          </div>
+          <div class="card rounded-lg p-4">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-gray-500 text-xs uppercase tracking-wider font-medium">Alerts Sent</span>
+              <svg class="w-4 h-4 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+            </div>
+            <div class="flex items-end gap-1">
+              <div class="text-2xl font-bold" :class="(status.alerts_sent_today ?? 0) >= 5 ? 'text-red-400' : 'text-white'" x-text="status.alerts_sent_today ?? '—'"></div>
+              <div class="text-gray-600 text-sm mb-0.5">/5 cap</div>
+            </div>
+            <div class="text-xs mt-1" :class="(status.alerts_sent_today ?? 0) >= 5 ? 'text-red-500' : 'text-gray-600'" x-text="(status.alerts_sent_today ?? 0) >= 5 ? 'Daily cap reached' : 'Telegram delivery'"></div>
+          </div>
+        </div>
+
+        <!-- System Status Row -->
+        <div class="grid grid-cols-3 gap-4">
+          <div class="card rounded-lg p-4">
+            <div class="text-xs text-gray-500 uppercase tracking-wider font-medium mb-3">Ingestion Lag</div>
+            <div class="flex items-end gap-2">
+              <div class="text-xl font-bold"
+                :class="(status.ingestion_lag_minutes ?? 0) > 30 ? 'text-red-400' : (status.ingestion_lag_minutes ?? 0) > 20 ? 'text-yellow-400' : 'text-green-400'"
+                x-text="status.ingestion_lag_minutes ? Math.round(status.ingestion_lag_minutes) + ' min' : '—'"></div>
+            </div>
+            <div class="text-xs text-gray-600 mt-1">since last article ingested</div>
+          </div>
+          <div class="card rounded-lg p-4">
+            <div class="text-xs text-gray-500 uppercase tracking-wider font-medium mb-3">Embedding Backlog</div>
+            <div class="text-xl font-bold"
+              :class="(status.embedding_backlog ?? 0) > 100 ? 'text-yellow-400' : 'text-white'"
+              x-text="status.embedding_backlog ?? '—'"></div>
+            <div class="text-xs text-gray-600 mt-1">articles awaiting embedding</div>
+          </div>
+          <div class="card rounded-lg p-4">
+            <div class="text-xs text-gray-500 uppercase tracking-wider font-medium mb-3">Last Intelligence Run</div>
+            <div class="text-sm font-medium text-white" x-text="status.last_intelligence_run ? timeAgo(status.last_intelligence_run) : 'Never'"></div>
+            <div class="text-xs text-gray-600 mt-1" x-text="status.last_intelligence_run ? formatDate(status.last_intelligence_run) : 'No cycle run yet'"></div>
+          </div>
+        </div>
+
+        <!-- Recent Intelligence Preview -->
+        <div class="card rounded-lg p-4">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-sm font-semibold text-white">Recent Intelligence</h3>
+            <button @click="currentView = 'intelligence'" class="text-xs text-blue-400 hover:text-blue-300">View all →</button>
+          </div>
+          <div x-show="intelligence.length === 0" class="text-center py-8 text-gray-600 text-sm">
+            No intelligence generated yet. Run a cycle to start.
+          </div>
+          <div class="space-y-3">
+            <template x-for="item in intelligence.slice(0, 3)" :key="item.id">
+              <div class="flex items-start gap-3 p-3 rounded" style="background:#060b18; border: 1px solid #1a2744;">
+                <span class="text-xs px-2 py-0.5 rounded font-medium flex-shrink-0 mt-0.5"
+                  :class="getBadgeClass(item.significance_level)"
+                  x-text="item.significance_level?.toUpperCase()"></span>
+                <div class="flex-1 min-w-0">
+                  <p class="text-sm text-gray-200 line-clamp-2" x-text="item.summary"></p>
+                  <div class="flex items-center gap-2 mt-1.5">
+                    <template x-for="ticker in (item.tickers || []).slice(0, 4)" :key="ticker">
+                      <span class="text-xs px-1.5 py-0.5 rounded font-mono" style="background:#0f2348; color:#60a5fa; border: 1px solid #1e3a8a;" x-text="ticker"></span>
+                    </template>
+                    <span class="text-xs text-gray-600 ml-auto" x-text="timeAgo(item.created_at)"></span>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTELLIGENCE -->
+      <div x-show="currentView === 'intelligence'" class="fade-in space-y-6">
+        <div class="flex items-center justify-between">
+          <div>
+            <h1 class="text-lg font-semibold text-white">Intelligence Feed</h1>
+            <p class="text-gray-500 text-sm mt-0.5">Claude-generated market analysis</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <select x-model="intelFilter" @change="loadIntelligence()"
+              class="text-xs px-3 py-2 rounded text-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              style="background:#0d1424; border: 1px solid #1a2744;">
+              <option value="">All significance</option>
+              <option value="critical">Critical</option>
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+          </div>
+        </div>
+
+        <div x-show="loadingIntel" class="space-y-4">
+          <template x-for="i in [1,2,3]" :key="i">
+            <div class="card rounded-lg p-5 shimmer h-40"></div>
+          </template>
+        </div>
+
+        <div x-show="!loadingIntel && intelligence.length === 0" class="card rounded-lg p-12 text-center">
+          <svg class="w-10 h-10 text-gray-700 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          <p class="text-gray-500 text-sm">No intelligence objects yet.</p>
+          <button @click="triggerCycle()" class="mt-3 text-xs text-blue-400 hover:text-blue-300">Trigger a cycle →</button>
+        </div>
+
+        <div x-show="!loadingIntel" class="space-y-4">
+          <template x-for="item in intelligence" :key="item.id">
+            <div class="card rounded-lg p-5 fade-in" :class="{'border-l-2 border-red-700': item.significance_level === 'critical', 'border-l-2 border-orange-700': item.significance_level === 'high'}">
+              <!-- Header -->
+              <div class="flex items-start justify-between gap-4 mb-4">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="text-xs px-2.5 py-1 rounded-full font-semibold"
+                    :class="getBadgeClass(item.significance_level)"
+                    x-text="item.significance_level?.toUpperCase()"></span>
+                  <template x-for="ticker in (item.tickers || [])" :key="ticker">
+                    <span class="text-xs px-2 py-0.5 rounded font-mono font-medium"
+                      style="background:#0f2348; color:#93c5fd; border: 1px solid #1e3a8a;"
+                      x-text="ticker"></span>
+                  </template>
+                  <template x-for="topic in (item.topics || []).slice(0, 2)" :key="topic">
+                    <span class="text-xs px-2 py-0.5 rounded text-gray-400"
+                      style="background:#111827; border: 1px solid #1f2937;"
+                      x-text="topic.replace(/_/g, ' ')"></span>
+                  </template>
+                </div>
+                <div class="flex items-center gap-3 flex-shrink-0">
+                  <div x-show="item.delivered_at" class="flex items-center gap-1 text-xs text-green-400">
+                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+                    Delivered
+                  </div>
+                  <span class="text-xs text-gray-500" x-text="formatDate(item.created_at)"></span>
+                </div>
+              </div>
+
+              <!-- Summary -->
+              <p class="text-gray-100 text-sm leading-relaxed mb-4" x-text="item.summary"></p>
+
+              <!-- Details Grid -->
+              <div class="grid grid-cols-2 gap-4 mb-4">
+                <div x-show="item.why_it_matters">
+                  <div class="text-xs text-gray-500 uppercase tracking-wider font-medium mb-1">Why It Matters</div>
+                  <p class="text-gray-300 text-xs leading-relaxed" x-text="item.why_it_matters"></p>
+                </div>
+                <div x-show="item.historical_context">
+                  <div class="text-xs text-gray-500 uppercase tracking-wider font-medium mb-1">Historical Context</div>
+                  <p class="text-gray-300 text-xs leading-relaxed" x-text="item.historical_context"></p>
+                </div>
+              </div>
+
+              <!-- Footer -->
+              <div class="flex items-center justify-between pt-3" style="border-top: 1px solid #1a2744;">
+                <div class="flex items-center gap-4">
+                  <div x-show="item.risks">
+                    <span class="text-xs text-yellow-600">⚠ </span>
+                    <span class="text-xs text-gray-500" x-text="item.risks?.substring(0, 80) + (item.risks?.length > 80 ? '...' : '')"></span>
+                  </div>
+                </div>
+                <!-- Confidence Score -->
+                <div class="flex items-center gap-3">
+                  <div class="text-xs text-gray-500">Confidence</div>
+                  <div class="flex items-center gap-2">
+                    <div class="w-24 h-1.5 rounded-full" style="background:#1a2744;">
+                      <div class="h-full rounded-full score-bar"
+                        :style="'width:' + ((item.confidence_score ?? 0) * 100) + '%'"
+                        :class="(item.confidence_score ?? 0) > 0.7 ? 'bg-green-500' : (item.confidence_score ?? 0) > 0.5 ? 'bg-yellow-500' : 'bg-red-500'"></div>
+                    </div>
+                    <span class="text-xs font-medium text-gray-300" x-text="item.confidence_score ? Math.round(item.confidence_score * 100) + '%' : '—'"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+
+      <!-- ARTICLES -->
+      <div x-show="currentView === 'articles'" class="fade-in space-y-6">
+        <div class="flex items-center justify-between">
+          <div>
+            <h1 class="text-lg font-semibold text-white">Articles</h1>
+            <p class="text-gray-500 text-sm mt-0.5">Ingested and scored news items</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <input x-model="articleTickerFilter" @input.debounce.300ms="loadArticles()"
+              placeholder="Filter by ticker..." type="text"
+              class="text-xs px-3 py-2 rounded text-gray-300 w-36 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              style="background:#0d1424; border: 1px solid #1a2744;" />
+            <select x-model="articleMinScore" @change="loadArticles()"
+              class="text-xs px-3 py-2 rounded text-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              style="background:#0d1424; border: 1px solid #1a2744;">
+              <option value="">All scores</option>
+              <option value="70">Score ≥ 70</option>
+              <option value="50">Score ≥ 50</option>
+              <option value="30">Score ≥ 30</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="card rounded-lg overflow-hidden">
+          <table class="w-full">
+            <thead>
+              <tr style="border-bottom: 1px solid #1a2744;">
+                <th class="text-left text-gray-500 font-semibold px-4 py-3 uppercase tracking-wider">Title</th>
+                <th class="text-left text-gray-500 font-semibold px-4 py-3 uppercase tracking-wider">Source</th>
+                <th class="text-left text-gray-500 font-semibold px-4 py-3 uppercase tracking-wider">Tickers</th>
+                <th class="text-left text-gray-500 font-semibold px-4 py-3 uppercase tracking-wider">Score</th>
+                <th class="text-left text-gray-500 font-semibold px-4 py-3 uppercase tracking-wider">Status</th>
+                <th class="text-left text-gray-500 font-semibold px-4 py-3 uppercase tracking-wider">Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr x-show="loadingArticles">
+                <td colspan="6" class="px-4 py-8 text-center text-gray-600 text-sm">Loading...</td>
+              </tr>
+              <tr x-show="!loadingArticles && articles.length === 0">
+                <td colspan="6" class="px-4 py-8 text-center text-gray-600 text-sm">No articles yet. Ingestion starts automatically every 15 minutes.</td>
+              </tr>
+              <template x-for="article in articles" :key="article.id">
+                <tr class="hover:bg-blue-950 hover:bg-opacity-20 transition-colors cursor-pointer"
+                  style="border-bottom: 1px solid #0d1424;"
+                  @click="expandedArticle = expandedArticle === article.id ? null : article.id">
+                  <td class="px-4 py-3 max-w-xs">
+                    <a :href="article.url" target="_blank" @click.stop class="text-sm text-gray-200 hover:text-blue-400 transition-colors line-clamp-2 leading-snug" x-text="article.title"></a>
+                    <div x-show="expandedArticle === article.id" class="text-xs text-gray-500 mt-1.5 leading-relaxed" x-text="article.summary"></div>
+                  </td>
+                  <td class="px-4 py-3">
+                    <div class="flex items-center gap-1.5">
+                      <span class="text-xs px-1.5 py-0.5 rounded font-medium"
+                        :class="getTierClass(article.source_tier)"
+                        x-text="'T' + article.source_tier"></span>
+                      <span class="text-xs text-gray-400 truncate max-w-24" x-text="article.source_name"></span>
+                    </div>
+                  </td>
+                  <td class="px-4 py-3">
+                    <div class="flex flex-wrap gap-1">
+                      <template x-for="ticker in (article.tickers || []).slice(0, 3)" :key="ticker">
+                        <span class="text-xs px-1.5 py-0.5 rounded font-mono"
+                          style="background:#0f2348; color:#93c5fd; border: 1px solid #1e3a8a;"
+                          x-text="ticker"></span>
+                      </template>
+                      <span x-show="(article.tickers || []).length > 3" class="text-xs text-gray-600"
+                        x-text="'+' + ((article.tickers || []).length - 3)"></span>
+                    </div>
+                  </td>
+                  <td class="px-4 py-3">
+                    <div class="flex items-center gap-2">
+                      <div class="w-12 h-1 rounded-full" style="background:#1a2744;">
+                        <div class="h-full rounded-full"
+                          :style="'width:' + (article.significance_score ?? 0) + '%'"
+                          :class="(article.significance_score ?? 0) >= 70 ? 'bg-orange-500' : (article.significance_score ?? 0) >= 50 ? 'bg-yellow-500' : 'bg-gray-600'"></div>
+                      </div>
+                      <span class="text-xs font-medium" :class="(article.significance_score ?? 0) >= 70 ? 'text-orange-400' : 'text-gray-400'" x-text="article.significance_score ? Math.round(article.significance_score) : '—'"></span>
+                    </div>
+                  </td>
+                  <td class="px-4 py-3">
+                    <div class="flex items-center gap-1.5">
+                      <div class="w-1.5 h-1.5 rounded-full flex-shrink-0"
+                        :class="article.is_processed ? 'bg-green-500' : 'bg-gray-600'"></div>
+                      <span class="text-xs text-gray-500" x-text="article.is_processed ? 'Processed' : 'Pending'"></span>
+                    </div>
+                  </td>
+                  <td class="px-4 py-3 text-xs text-gray-500" x-text="timeAgo(article.published_at)"></td>
+                </tr>
+              </template>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- SOURCES -->
+      <div x-show="currentView === 'sources'" class="fade-in space-y-6">
+        <div>
+          <h1 class="text-lg font-semibold text-white">Data Sources</h1>
+          <p class="text-gray-500 text-sm mt-0.5">Feed registry and health status</p>
+        </div>
+
+        <!-- Tier Legend -->
+        <div class="flex items-center gap-3">
+          <span class="text-xs text-gray-500">Trust tier:</span>
+          <span class="text-xs px-2 py-0.5 rounded tier-1">T1 — SEC/FRED/Gov</span>
+          <span class="text-xs px-2 py-0.5 rounded tier-2">T2 — Reuters/AP/FT</span>
+          <span class="text-xs px-2 py-0.5 rounded tier-3">T3 — APIs</span>
+          <span class="text-xs px-2 py-0.5 rounded tier-4">T4 — Sentiment</span>
+        </div>
+
+        <div x-show="loadingSources" class="grid grid-cols-3 gap-3">
+          <template x-for="i in [1,2,3,4,5,6]" :key="i">
+            <div class="card rounded-lg p-4 shimmer h-24"></div>
+          </template>
+        </div>
+
+        <div x-show="!loadingSources && sources.length === 0" class="card rounded-lg p-12 text-center">
+          <p class="text-gray-500 text-sm">No sources registered yet.</p>
+        </div>
+
+        <div x-show="!loadingSources" class="grid grid-cols-3 gap-3">
+          <template x-for="source in sources" :key="source.id">
+            <div class="card rounded-lg p-4" :class="!source.is_active ? 'opacity-50' : ''">
+              <div class="flex items-start justify-between mb-2">
+                <div class="flex items-center gap-2 min-w-0">
+                  <div class="w-2 h-2 rounded-full flex-shrink-0"
+                    :class="source.is_active && source.last_fetched_at && !source.last_error ? 'bg-green-500' : source.last_error ? 'bg-red-500' : 'bg-gray-600'"></div>
+                  <span class="text-sm text-gray-200 font-medium truncate" x-text="source.name"></span>
+                </div>
+                <span class="text-xs px-1.5 py-0.5 rounded flex-shrink-0"
+                  :class="getTierClass(source.tier)"
+                  x-text="'T' + source.tier"></span>
+              </div>
+              <div class="text-xs text-gray-600 truncate mb-2" x-text="source.id"></div>
+              <div class="flex items-center justify-between">
+                <span class="text-xs text-gray-500" x-text="source.last_fetched_at ? timeAgo(source.last_fetched_at) : 'Never fetched'"></span>
+                <span class="text-xs text-gray-600" x-text="source.article_count + ' articles'"></span>
+              </div>
+              <div x-show="source.last_error" class="text-xs text-red-400 mt-1.5 truncate" x-text="source.last_error"></div>
+            </div>
+          </template>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div x-show="toast.show" x-transition
+    class="fixed bottom-6 right-6 px-4 py-3 rounded-lg text-sm font-medium shadow-lg z-50"
+    :class="toast.type === 'success' ? 'bg-green-900 text-green-300 border border-green-700' : 'bg-red-900 text-red-300 border border-red-700'"
+    x-text="toast.message"></div>
+
+<script>
+function app() {
+  return {
+    currentView: 'overview',
+    status: {},
+    intelligence: [],
+    articles: [],
+    sources: [],
+    systemOnline: false,
+    triggering: false,
+    loadingIntel: false,
+    loadingArticles: false,
+    loadingSources: false,
+    intelFilter: '',
+    articleTickerFilter: '',
+    articleMinScore: '',
+    expandedArticle: null,
+    lastUpdated: '',
+    toast: { show: false, message: '', type: 'success' },
+
+    navItems: [
+      { id: 'overview', label: 'Overview', icon: '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zm0 10a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zm10-10a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zm0 10a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z"/></svg>' },
+      { id: 'intelligence', label: 'Intelligence', icon: '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>' },
+      { id: 'articles', label: 'Articles', icon: '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 12h6"/></svg>' },
+      { id: 'sources', label: 'Sources', icon: '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/></svg>' },
+    ],
+
+    async init() {
+      await this.refreshAll();
+      // Auto-refresh every 60 seconds
+      setInterval(() => this.refreshAll(), 60000);
+    },
+
+    async refreshAll() {
+      await Promise.all([
+        this.loadStatus(),
+        this.loadIntelligence(),
+        this.loadArticles(),
+        this.loadSources(),
+      ]);
+      this.lastUpdated = 'Updated ' + new Date().toLocaleTimeString();
+    },
+
+    async loadStatus() {
+      try {
+        const r = await fetch('/status');
+        if (r.ok) {
+          this.status = await r.json();
+          this.systemOnline = true;
+        } else {
+          this.systemOnline = false;
+        }
+      } catch {
+        this.systemOnline = false;
+      }
+    },
+
+    async loadIntelligence() {
+      this.loadingIntel = true;
+      try {
+        let url = '/intelligence?limit=50';
+        if (this.intelFilter) url += '&significance_level=' + this.intelFilter;
+        const r = await fetch(url);
+        if (r.ok) this.intelligence = await r.json();
+      } catch {}
+      this.loadingIntel = false;
+    },
+
+    async loadArticles() {
+      this.loadingArticles = true;
+      try {
+        let url = '/articles?limit=100';
+        if (this.articleTickerFilter) url += '&ticker=' + this.articleTickerFilter.toUpperCase();
+        if (this.articleMinScore) url += '&min_significance=' + this.articleMinScore;
+        const r = await fetch(url);
+        if (r.ok) this.articles = await r.json();
+      } catch {}
+      this.loadingArticles = false;
+    },
+
+    async loadSources() {
+      this.loadingSources = true;
+      try {
+        const r = await fetch('/sources');
+        if (r.ok) this.sources = await r.json();
+      } catch {}
+      this.loadingSources = false;
+    },
+
+    async triggerCycle() {
+      this.triggering = true;
+      try {
+        const r = await fetch('/intelligence/trigger', { method: 'POST' });
+        if (r.ok) {
+          this.showToast('Intelligence cycle queued successfully', 'success');
+          setTimeout(() => this.loadIntelligence(), 5000);
+        } else {
+          this.showToast('Failed to trigger cycle', 'error');
+        }
+      } catch {
+        this.showToast('Failed to trigger cycle', 'error');
+      }
+      setTimeout(() => { this.triggering = false; }, 3000);
+    },
+
+    showToast(message, type = 'success') {
+      this.toast = { show: true, message, type };
+      setTimeout(() => { this.toast.show = false; }, 3500);
+    },
+
+    getBadgeClass(level) {
+      const map = { critical: 'badge-critical', high: 'badge-high', medium: 'badge-medium', low: 'badge-low' };
+      return map[level] || 'badge-low';
+    },
+
+    getTierClass(tier) {
+      const map = { 1: 'tier-1', 2: 'tier-2', 3: 'tier-3', 4: 'tier-4' };
+      return map[tier] || 'tier-4';
+    },
+
+    timeAgo(dateStr) {
+      if (!dateStr) return '—';
+      const d = new Date(dateStr);
+      const diff = Math.floor((Date.now() - d) / 1000);
+      if (diff < 60) return diff + 's ago';
+      if (diff < 3600) return Math.floor(diff / 60) + 'm ago';
+      if (diff < 86400) return Math.floor(diff / 3600) + 'h ago';
+      return Math.floor(diff / 86400) + 'd ago';
+    },
+
+    formatDate(dateStr) {
+      if (!dateStr) return '—';
+      return new Date(dateStr).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+    },
+  }
+}
+</script>
+</body>
+</html>
